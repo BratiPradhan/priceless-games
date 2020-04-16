@@ -8,7 +8,7 @@ class Search extends Component{
   constructor(props){
     super(props);
     this.state = {
-      result: []
+      games: []
     }
   }
 
@@ -16,20 +16,8 @@ class Search extends Component{
     axios.get(`https://www.cheapshark.com/api/1.0/games?title=${input}&limit=5&exact=3`)
     .then(response => response.data )
     .then(data => {
-      const newResult = data;
-      this.setState({result: newResult})
-      
-      
-      /* games.forEach(game => {
-        fetch(`https://www.cheapshark.com/api/1.0/games?id=${game.gameID}`)
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(game) {
-          
-          // console.log(`Game : ${game.info.title} | Cheapest price : ${game.deals[0].price}`)
-        })
-      }); */
+      const games = data;
+      this.setState({ games })
     });
   }
   
@@ -46,7 +34,7 @@ class Search extends Component{
             this.getGames(input.value);
           }}
         />
-        <SearchList games={this.state.result} />
+        <SearchList games={this.state.games} />
       </div>
     )
   }

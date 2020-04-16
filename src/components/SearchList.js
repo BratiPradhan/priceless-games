@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
+import SearchResult from './SearchResult';
 
-const SearchList = ({games}) => {
+const SearchList = (props) => {
     return(
         <ul>
             {
-            games.map(game => <li key={game.gameID}>{game.gameID}</li>)
+            props.games.map(game => <SearchResult key={game.gameID} gameID={game.gameID} img={game.thumb} />)
             }
         </ul>
-    )
+        )
 }
 
 export default SearchList;
