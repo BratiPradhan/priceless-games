@@ -31,9 +31,10 @@ class Search extends Component{
           name="search"
           onChange={(event) => {
             const input = event.target;
-            this.getGames(input.value);
+            this.getGames(input.value)
           }}
         />
+        
         <SearchList games={this.state.games} />
       </div>
     )

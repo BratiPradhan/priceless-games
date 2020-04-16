@@ -3,12 +3,18 @@ import SearchResult from './SearchResult';
 
 const SearchList = (props) => {
     return(
-        <ul>
+        <div>
             {
-            props.games.map(game => <SearchResult key={game.gameID} gameID={game.gameID} img={game.thumb} />)
+            props.games.map(game => 
+                <SearchResult
+                    key={game.gameID}
+                    gameID={game.gameID}
+                    img={game.thumb} 
+                />
+                )
             }
-        </ul>
-        )
+        </div>
+    )
 }
 
 export default SearchList;

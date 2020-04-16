@@ -10,7 +10,7 @@ class SearchResult extends Component {
                     title: ""
                 },
                 deals: {
-                    0 :{
+                    0: {
                         price: ""
                     } 
                 }
@@ -22,7 +22,7 @@ class SearchResult extends Component {
         this.getGame(this.props.gameID)
     }
 
-    getGame = gameID =>{
+    getGame = gameID => {
         axios.get(`https://www.cheapshark.com/api/1.0/games?id=${gameID}`)
         .then(response => response.data)
         .then(data => {
@@ -33,13 +33,13 @@ class SearchResult extends Component {
     
     render(){
         return(
-            <li>
-                <img src={this.props.img}/>
+            <a href="#">
+                <img alt={this.state.game.info.title} src={this.props.img}/>
                 <div>
                     <h3>{this.state.game.info.title}</h3>
                     <p>{this.state.game.deals[0].price} $</p>
                 </div>
-            </li>
+            </a>
         )
     }
 }
