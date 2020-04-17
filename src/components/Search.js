@@ -13,7 +13,7 @@ class Search extends Component{
   }
 
   getGames = (input) => {
-    axios.get(`https://www.cheapshark.com/api/1.0/games?title=${input}&limit=5&exact=3`)
+    axios.get(`https://www.cheapshark.com/api/1.0/games?title=${input}&limit=5`)
     .then(response => response.data )
     .then(data => {
       const games = data;
