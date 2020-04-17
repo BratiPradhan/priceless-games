@@ -17,6 +17,7 @@ body {
   align-items: center;
   height: 100vh;
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 input {
@@ -47,6 +48,6 @@ a:hover {
 }
 a img {
   max-height: 90px;
-  max-width: 80px;
+  width: 80px;
   margin-right: 1.5rem;
 }
