@@ -9,7 +9,7 @@ function App() {
       <Route exact path="/">
         <Search />
       </Route>
-      <Route path="/search/:key" component={GameList} />
+      <Route path="/search" component={GameList} />
     </Switch>
   )
 }

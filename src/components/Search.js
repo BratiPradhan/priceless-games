@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
-import {Link, Redirect} from 'react-router-dom'
 import SearchList from './SearchList'
 import './Search.css'
 import axios from 'axios';
+import {
+  withRouter
+} from 'react-router-dom'
 
 
 class Search extends Component{
@@ -15,7 +17,7 @@ class Search extends Component{
   }
 
   getGames = (input) => {
-    axios.get(`https://www.cheapshark.com/api/1.0/games?title=${input}&limit=5`)
+    axios.get(`https://www.cheapshark.com/api/1.0/games?title=${input}&limit=15`)
     .then(response => response.data )
     .then(data => {
       const games = data;
@@ -24,14 +26,16 @@ class Search extends Component{
   }
 
   handleSearch = () => {
-    
+    this.props.history.push({
+      pathname: `/search`,
+      state: { games: this.state.games }
+    })
   }
   
   render(){
     const { games } = this.state;
     return(
       <div>
-        <Link to={`/search/${this.state.value}`}>rechercher</Link>
         <input 
           type="text"
           placeholder="Look for a game"
@@ -49,13 +53,12 @@ class Search extends Component{
               this.handleSearch()
             }
           }}
-        />
-        
-        <SearchList games={games} />
+        /> 
+        <SearchList games={games.slice(0,5)} />
       </div>
     )
   }
 
 }
 
-export default Search;
+export default withRouter(Search);

@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const GameList = props => {
-    const {key} = props.match.params
-    return(
-        <h1>{key}</h1>
-    )
+class GameList extends Component{
+    render(){
+        const games = this.props.location.state.games
+        return(
+            <ul>
+                {games.map(game => <li key={game.gameID}>component here</li>)}
+            </ul>
+        )
+    }
 }
 
 export default GameList
