@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link, Redirect} from 'react-router-dom'
 import SearchList from './SearchList'
 import './Search.css'
 import axios from 'axios';
@@ -8,6 +9,7 @@ class Search extends Component{
   constructor(props){
     super(props);
     this.state = {
+      value: '',
       games: []
     }
   }
@@ -20,23 +22,36 @@ class Search extends Component{
       this.setState({ games })
     });
   }
+
+  handleSearch = () => {
+    
+  }
   
   render(){
+    const { games } = this.state;
     return(
       <div>
+        <Link to={`/search/${this.state.value}`}>rechercher</Link>
         <input 
           type="text"
           placeholder="Look for a game"
           autoComplete="off"
           id="main-search"
           name="search"
+          value={this.state.value}
           onChange={(event) => {
             const input = event.target;
+            this.setState({value : input.value})
             this.getGames(input.value)
+          }}
+          onKeyUp={(e) => {
+            if(e.keyCode === 13){
+              this.handleSearch()
+            }
           }}
         />
         
-        <SearchList games={this.state.games} />
+        <SearchList games={games} />
       </div>
     )
   }
