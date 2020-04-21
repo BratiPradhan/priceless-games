@@ -27,7 +27,7 @@ class Search extends Component{
         <input 
           type="text"
           placeholder="Look for a game"
-          autocomplete="off"
+          autoComplete="off"
           id="main-search"
           name="search"
           onChange={(event) => {
