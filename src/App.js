@@ -1,6 +1,5 @@
 import React from 'react';
-import Search from './components/Search'
-import GameInfo from './components/GameInfo'
+import GameInfo from './components/GameInfo/GameInfo'
 
 function App() {
   return (
