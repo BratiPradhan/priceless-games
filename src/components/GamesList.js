@@ -5,7 +5,7 @@ class GameList extends Component{
     render(){
         const games = this.props.location.state.games
         return(
-            <div>
+            <div className="game-list-rows">
                 {
                 games.map(game => 
                     <GameCard

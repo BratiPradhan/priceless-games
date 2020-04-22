@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './GameCard.css'
 import axios from 'axios';
 
 
@@ -34,12 +35,13 @@ class GameCard extends Component {
 
     render(){
         const game = this.state.game;
+        const thumb = {backgroundImage: `url(${this.props.thumb})`}
         return(
-            <a href='#'>
-                <img alt="game thumb" src={this.props.thumb} />
-                <div>
+            <a className="game-card" href='#'>
+                <span style={thumb}></span>
+                <div className="game-info">
                     <p>{game.info.title}</p>
-                    <p>{game.deals[0].price}</p>
+                    <p className="game-price">{game.deals[0].price} $</p>
                 </div>
             </a>
         )

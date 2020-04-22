@@ -3,7 +3,7 @@ import SearchResult from './SearchResult';
 
 const SearchList = (props) => {
     return(
-        <div>
+        <div className="direct-search-desult">
             {
             props.games.map(game => 
                 <SearchResult
