@@ -34,7 +34,7 @@ class SearchResult extends Component {
     render(){
         return(
             <a href="#" onClick={() => console.log(this.state.game.info.title)}>
-                <img alt={this.state.game.info.title} src={this.props.img}/>
+                <img alt={this.state.game.info.title} src={this.props.thumb}/>
                 <div>
                     <h3>{this.state.game.info.title}</h3>
                     <p>{this.state.game.deals[0].price} $</p>

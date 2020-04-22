@@ -8,8 +8,7 @@ const SearchList = (props) => {
             props.games.map(game => 
                 <SearchResult
                     key={game.gameID}
-                    gameID={game.gameID}
-                    img={game.thumb} 
+                    {...game}
                 />
                 )
             }
