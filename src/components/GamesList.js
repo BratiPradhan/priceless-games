@@ -5,9 +5,15 @@ class GameList extends Component{
     render(){
         const games = this.props.location.state.games
         return(
-            <ul>
-                {games.map(game => <GameCard gameID={game.gameID}/>)}
-            </ul>
+            <div>
+                {
+                games.map(game => 
+                    <GameCard
+                        key={game.gameID}
+                        {...game}
+                    />)
+                }
+            </div>
         )
     }
 }
