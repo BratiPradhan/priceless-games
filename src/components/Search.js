@@ -36,24 +36,21 @@ class Search extends Component{
     const { games } = this.state;
     return(
       <div>
-        <input 
-          type="text"
-          placeholder="Look for a game"
-          autoComplete="off"
-          id="main-search"
-          name="search"
-          value={this.state.value}
-          onChange={(event) => {
-            const input = event.target;
-            this.setState({value : input.value})
-            this.getGames(input.value)
-          }}
-          onKeyUp={(e) => {
-            if(e.keyCode === 13){
-              this.handleSearch()
-            }
-          }}
-        /> 
+        <form onSubmit={this.handleSearch}>
+          <input 
+            type="text"
+            placeholder="Look for a game"
+            autoComplete="off"
+            id="main-search"
+            name="search"
+            value={this.state.value}
+            onChange={(event) => {
+              const input = event.target;
+              this.setState({value : input.value})
+              this.getGames(input.value)
+            }}
+          />
+        </form>
         <SearchList games={games.slice(0,5)} />
       </div>
     )
