@@ -11,7 +11,7 @@ function App() {
         <Search />
       </Route>
       <Route path="/search" component={GameList} />
-      <Route path="/:game" component={GameInfo} />
+      <Route path="/:gameID" component={GameInfo} />
     </Switch>
   )
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 class SearchResult extends Component {
     constructor(props){
@@ -32,17 +34,18 @@ class SearchResult extends Component {
     }
     
     render(){
-        const game = this.state.game;
+        const { game } = this.state;
+        const { gameID } = this.props
         return(
-            <a href="#" onClick={() => console.log(game.info.title)}>
+            <Link to={`/${gameID}`}>
                 <img alt={game.info.title} src={this.props.thumb}/>
                 <div>
                     <h3>{game.info.title}</h3>
                     <p>{game.deals[0].price} $</p>
                 </div>
-            </a>
+            </Link>
         )
     }
 }
 
-export default SearchResult;
+export default withRouter(SearchResult);

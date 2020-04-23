@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 import './GameCard.css'
 import axios from 'axios';
 
@@ -34,18 +36,19 @@ class GameCard extends Component {
     }
 
     render(){
-        const game = this.state.game;
+        const { game } = this.state;
+        const { gameID } = this.props
         const thumb = {backgroundImage: `url(${this.props.thumb})`}
         return(
-            <a className="game-card" href='#'>
+            <Link to={`/${gameID}`} className="game-card">
                 <span style={thumb}></span>
                 <div className="game-info">
                     <p>{game.info.title}</p>
                     <p className="game-price">{game.deals[0].price} $</p>
                 </div>
-            </a>
+            </Link>
         )
     }
 }
 
-export default GameCard;
+export default withRouter(GameCard);
