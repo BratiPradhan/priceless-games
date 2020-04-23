@@ -8,12 +8,10 @@
 }
 
 body {
-  height: 100vh;
   background: #171a21;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
