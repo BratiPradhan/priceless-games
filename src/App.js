@@ -2,6 +2,7 @@ import React from 'react';
 import Search from './components/Search';
 import {Switch, Route} from 'react-router-dom';
 import GameList from './components/GamesList'
+import GameInfo from './components/GameInfo/GameInfo'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Search />
       </Route>
       <Route path="/search" component={GameList} />
-      <Route path="/:game" component />
+      <Route path="/:game" component={GameInfo} />
     </Switch>
   )
 }
