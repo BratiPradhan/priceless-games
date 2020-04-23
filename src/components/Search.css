@@ -10,8 +10,7 @@
 body {
   height: 100vh;
 	width: 100%;
-  background: #0f2027; /* fallback for old browsers */
-  background: linear-gradient(to right,#ED0197, #9D11A1, #511DA7);
+  background: #171a21;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +34,7 @@ input {
   transition: all 0.3s;
 }
 
-a {
+.direct-search-desult a {
   display: flex;
   text-decoration: none;
   color: #fff;
@@ -43,10 +42,10 @@ a {
   padding: 10px 20px;
   
 }
-a:hover {
+.direct-search-desult a:hover {
   background-color: #511DA7;
 }
-a img {
+.direct-search-desult a img {
   max-height: 90px;
   width: 80px;
   margin-right: 1.5rem;
