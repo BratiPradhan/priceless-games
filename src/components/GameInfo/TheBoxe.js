@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 
 const theBoxe= {
-    width: "300px"
+    width: "300px",
+    marginLeft: "50px"
 
 }
 const boxOne={
@@ -9,14 +10,14 @@ const boxOne={
     height: "140px",
     border: "1px solid yellow",    
     marginTop: "2px",
-    marginLeft: "80px"
+    marginLeft: "40px"
 }
 const boxTwo={
     width: "130px",
     height: "140px",
     border: "1px solid yellow",    
     marginTop: "10px",
-    marginLeft: "80px"
+    marginLeft: "40px"
 }
 
 const note={

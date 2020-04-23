@@ -7,7 +7,13 @@ import TheBoxe from './TheBoxe';
 const gameInfoStyle= {
     display: "flex",
     flexDirection: "row",
-    height: "300px"
+    height: "300px",
+    width: "300px",
+    position:"absolute",
+    left: "32%",
+    top: "50%",
+    marginLeft: "-150px",
+    marginTop: "-150px"
 }
 
 
