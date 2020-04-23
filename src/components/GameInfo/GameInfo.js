@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PriceStyle from './Image';
-import Note from './PriceList';
+import PriceList from './PriceList';
 import TheBoxe from './TheBoxe';
 
 
@@ -20,7 +20,7 @@ class GameInfo extends Component {
             <div style={gameInfoStyle}> 
              <PriceStyle /> 
              <TheBoxe /> 
-             <Note /> 
+             <PriceList /> 
 
              </div>
     );
