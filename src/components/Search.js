@@ -35,7 +35,7 @@ class Search extends Component{
   render(){
     const { games } = this.state;
     return(
-      <div>
+      <div className="search-form">
         <form onSubmit={this.handleSearch}>
           <input 
             type="text"

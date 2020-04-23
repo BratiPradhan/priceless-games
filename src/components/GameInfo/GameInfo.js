@@ -7,7 +7,8 @@ import TheBoxe from './TheBoxe';
 const gameInfoStyle= {
     display: "flex",
     flexDirection: "row",
-    height: "300px"
+    height: "300px",
+    margin: "auto"
 }
 
 
@@ -17,11 +18,10 @@ class GameInfo extends Component {
    render() {
     return(
         
-            <div style={gameInfoStyle}> 
-             <PriceStyle /> 
-             <TheBoxe /> 
-             <Note /> 
-
+            <div style={gameInfoStyle} > 
+                <PriceStyle /> 
+                <TheBoxe /> 
+                <Note /> 
              </div>
     );
 }
