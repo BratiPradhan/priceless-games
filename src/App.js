@@ -1,9 +1,17 @@
 import React from 'react';
-import GameInfo from './components/GameInfo/GameInfo'
+import Search from './components/Search';
+import {Switch, Route} from 'react-router-dom';
+import GameList from './components/GamesList'
 
 function App() {
   return (
-   <GameInfo  />
+    <Switch>
+      <Route exact path="/">
+        <Search />
+      </Route>
+      <Route path="/search" component={GameList} />
+      <Route path="/:game" component />
+    </Switch>
   )
 }
 
