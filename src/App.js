@@ -10,6 +10,7 @@ function App() {
         <Search />
       </Route>
       <Route path="/search" component={GameList} />
+      <Route path="/:game" component />
     </Switch>
   )
 }
