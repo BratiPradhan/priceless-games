@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PriceStyle from './Image';
+import Image from './Image';
 import PriceList from './PriceList';
 import TheBoxe from './TheBoxe';
 
@@ -18,7 +18,7 @@ class GameInfo extends Component {
     return(
         
             <div style={gameInfoStyle}> 
-             <PriceStyle /> 
+             <Image /> 
              <TheBoxe /> 
              <PriceList /> 
 
