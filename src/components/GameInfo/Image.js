@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 
 const priceStyle= {
-    backgroundColor:"#511DA7",
+    
     width: "300px", 
- 
+    marginLeft: "200px",
+    marginTop: "250px"
 }
 const image={
     width: "300px",

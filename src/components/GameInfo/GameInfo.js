@@ -6,14 +6,12 @@ import TheBoxe from './TheBoxe';
 
 const gameInfoStyle= {
     display: "flex",
-    flexDirection: "row",
-    height: "300px",
-    width: "300px",
-    position:"absolute",
-    left: "32%",
-    top: "50%",
-    marginLeft: "-150px",
-    marginTop: "-150px"
+    height: "100vh",
+    backgroundImage: `url(${'https://data.photofunky.net/output/image/a/f/0/5/af05b1/photofunky.gif'})`,
+    backgroundPosition: "center",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  top: "25%"
 }
 
 
@@ -23,7 +21,7 @@ class GameInfo extends Component {
    render() {
     return(
         
-            <div style={gameInfoStyle}> 
+            <div style={gameInfoStyle}>  
              <Image /> 
              <TheBoxe /> 
              <PriceList /> 

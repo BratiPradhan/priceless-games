@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 
 const theBoxe= {
     width: "300px",
-    marginLeft: "50px"
+    marginLeft: "100px",
+    marginTop: "250px"
 
 }
 const boxOne={
