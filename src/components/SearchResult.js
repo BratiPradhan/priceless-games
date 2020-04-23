@@ -37,7 +37,10 @@ class SearchResult extends Component {
         const { game } = this.state;
         const { gameID } = this.props
         return(
-            <Link to={`/${gameID}`}>
+            <Link to={{
+                pathname: `/game/${gameID}`,
+                state: { game: game }
+            }}>
                 <img alt={game.info.title} src={this.props.thumb}/>
                 <div>
                     <h3>{game.info.title}</h3>
