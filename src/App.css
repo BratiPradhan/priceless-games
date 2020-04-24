@@ -1,3 +1,6 @@
 #root {
+    height: 100%;
     max-width: 1250px; 
+    display: flex;
+    margin: auto;
 }
