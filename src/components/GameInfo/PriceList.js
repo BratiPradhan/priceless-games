@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 const noteStyle= {
     width: "300px",
-    marginLeft: "-50px",
+    marginLeft: "120px",
     marginTop:"230px"
  
 }

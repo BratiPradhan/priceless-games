@@ -11,24 +11,24 @@ const gameInfoStyle= {
     backgroundPosition: "center",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
-  top: "25%"
+
 }
 
 
 class GameInfo extends Component {
-    
+
+
    
    render() {
     return(
         
             <div style={gameInfoStyle}>  
-             <Image /> 
-             <TheBoxe /> 
+             <Image imgurl= {this.props.location.state.game.thumb} />
              <PriceList /> 
-
+             <TheBoxe />
              </div>
-    );
-}
+        );
+    }
 }
 
 export default GameInfo
