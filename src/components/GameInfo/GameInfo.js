@@ -17,11 +17,11 @@ class GameInfo extends Component {
    render() {
     return(
         
-            <div style={gameInfoStyle}>  
-             <Image imgurl= {this.props.location.state.game.thumb} />
-             <PriceList /> 
-             <TheBoxe />
-             </div>
+        <div style={gameInfoStyle}>  
+            <Image imgurl= {this.props.location.state.game.thumb} />
+            <TheBoxe />
+            <PriceList /> 
+        </div>
         );
     }
 }
