@@ -29,6 +29,7 @@ class SearchResult extends Component {
         .then(response => response.data)
         .then(data => {
             const game = data;
+            game.thumb = this.props.thumb;
             this.setState({ game })
         })
     }

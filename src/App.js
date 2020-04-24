@@ -6,7 +6,10 @@ import GameInfo from './components/GameInfo/GameInfo'
 import './App.css'
 
 function App() {
+
   return (
+
+
     <Switch>
       <Route exact path="/">
         <Search />
@@ -14,6 +17,9 @@ function App() {
       <Route path="/search" component={GameList} />
       <Route path="/game/:gameID" component={GameInfo} />
     </Switch>
+
+  
+
   )
 }
 

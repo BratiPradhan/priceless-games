@@ -1,30 +1,29 @@
 import React, { Component } from 'react';
-import PriceStyle from './Image';
-import Note from './PriceList';
+import Image from './Image';
+import PriceList from './PriceList';
 import TheBoxe from './TheBoxe';
 
 
 const gameInfoStyle= {
     display: "flex",
-    flexDirection: "row",
-    height: "300px",
-    margin: "auto"
+    height: "100vh",
 }
 
 
 class GameInfo extends Component {
-    
+
+
    
    render() {
     return(
         
-            <div style={gameInfoStyle} > 
-                <PriceStyle /> 
-                <TheBoxe /> 
-                <Note /> 
+            <div style={gameInfoStyle}>  
+             <Image imgurl= {this.props.location.state.game.thumb} />
+             <PriceList /> 
+             <TheBoxe />
              </div>
-    );
-}
+        );
+    }
 }
 
 export default GameInfo
