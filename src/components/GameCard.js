@@ -31,6 +31,7 @@ class GameCard extends Component {
         .then(res => res.data)
         .then(data => {
             const game = data;
+            game.thumb = this.props.thumb;
             this.setState({ game })
         })
     }
