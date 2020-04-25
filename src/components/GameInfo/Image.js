@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const priceStyle= {
     
@@ -13,7 +13,6 @@ const image={
 
 const Image = (props) =>{
   
-    
         return(
 
                 <div style={priceStyle}>

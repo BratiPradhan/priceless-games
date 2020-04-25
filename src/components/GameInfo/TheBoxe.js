@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 const theBoxe= {
     width: "300px",
@@ -34,8 +34,8 @@ const notep={
  marginLeft: "45px",
  marginTop: "5px"
 }
-class TheBoxe extends Component {
-    render(){
+const TheBoxe = (props) => {
+
         return(
 
              <div style={theBoxe}>
@@ -55,6 +55,6 @@ class TheBoxe extends Component {
              </div>  
         );
     }
-}
+
     
     export default TheBoxe

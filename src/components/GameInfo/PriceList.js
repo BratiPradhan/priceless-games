@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 const noteStyle= {
     width: "300px",
@@ -33,8 +33,8 @@ const sourceFive= {
 }
 
 
-class PriceList extends Component {
-    render(){
+const PriceList =(props) => {
+  
         return(
 
                 <div style={noteStyle}>
@@ -49,6 +49,6 @@ class PriceList extends Component {
         );        
     }    
 
-}    
+  
 
 export default PriceList
