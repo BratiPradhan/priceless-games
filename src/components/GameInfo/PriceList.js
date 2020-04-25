@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 const noteStyle= {
     width: "300px",
