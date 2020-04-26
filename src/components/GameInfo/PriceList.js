@@ -39,7 +39,7 @@ const PriceList =(props) => {
 
                 <div style={noteStyle}>
                         <ul style={source}>
-                                <li style={sourceOne}>Source................Prix</li> 
+                                <li style={sourceOne}> {props.price} $ </li> 
                                 <li style={sourceTwo}>Source................Prix</li>
                                 <li style={sourceTree}>Source................Prix</li>
                                 <li style={sourceFour}>Source................Prix</li>

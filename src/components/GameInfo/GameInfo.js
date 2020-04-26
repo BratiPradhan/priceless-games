@@ -16,10 +16,13 @@ class GameInfo extends Component {
     return(
         
             <div style={gameInfoStyle}>  
-             <Image imgurl= {this.props.location.state.game.thumb} />
 
-             <PriceList /> 
-             <TheBoxe />
+                    <Image imgurl= {this.props.location.state.game.thumb} />
+                    
+                    <PriceList price= {this.props.location.state.game.deals[0].price} /> 
+
+                    <TheBoxe />
+
              </div>
         );
     }

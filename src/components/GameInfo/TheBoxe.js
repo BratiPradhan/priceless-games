@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 const theBoxe= {
     width: "300px",
@@ -11,14 +11,14 @@ const boxOne={
     height: "140px",
     border: "1px solid yellow",    
     marginTop: "2px",
-    marginLeft: "40px"
+    marginLeft: "0px"
 }
 const boxTwo={
     width: "130px",
     height: "140px",
     border: "1px solid yellow",    
     marginTop: "10px",
-    marginLeft: "40px"
+    marginLeft: "0px"
 }
 
 const note={
