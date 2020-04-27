@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import DealRating from './DealRating';
+import Note from './Note';
 
 const theBoxe= {
     width: "300px",
@@ -51,7 +53,8 @@ const RatingNote = (props) => {
                   <img src="https://thumbs.dreamstime.com/z/ic-ne-de-signe-de-manette-symbole-de-jeu-vid%C3%A9o-79712581.jpg" alt="note" style={note} />
                    <p style={notep}>Note</p>
                     </div>
-
+                  <DealRating />
+                  <Note />
              </div>  
         );
     }
