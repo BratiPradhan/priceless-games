@@ -34,7 +34,7 @@ const notep={
  marginLeft: "45px",
  marginTop: "5px"
 }
-const TheBoxe = (props) => {
+const RatingNote = (props) => {
 
         return(
 
@@ -57,4 +57,4 @@ const TheBoxe = (props) => {
     }
 
     
-    export default TheBoxe
+    export default RatingNote
