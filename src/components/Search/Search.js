@@ -12,7 +12,8 @@ class Search extends Component{
     super(props);
     this.state = {
       value: '',
-      games: []
+      games: [],
+      isFocus: true
     }
   }
 
@@ -31,9 +32,15 @@ class Search extends Component{
       state: { games: this.state.games }
     })
   }
+
+  handleChange = (e) => {
+    const input = e.target;
+    this.setState({value : input.value})
+    this.getGames(input.value)
+  }
   
   render(){
-    const { games } = this.state;
+    const { games, isFocus } = this.state;
     return(
       <div className="search-form">
         <form onSubmit={this.handleSearch}>
@@ -45,13 +52,13 @@ class Search extends Component{
             name="search"
             value={this.state.value}
             onChange={(event) => {
-              const input = event.target;
-              this.setState({value : input.value})
-              this.getGames(input.value)
+              this.handleChange(event)
             }}
           />
         </form>
-        <SearchList games={games.slice(0,5)} />
+
+        { isFocus ? <SearchList games={games.slice(0,5)} /> : "" }
+
       </div>
     )
   }
