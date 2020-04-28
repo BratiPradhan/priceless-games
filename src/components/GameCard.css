@@ -1,44 +1,32 @@
-.game-list-rows {
-    width: 700px;
-    margin: auto;
+.game-card{
+    max-width: 700px;
     display: flex;
-    justify-content: space-around;
     flex-direction: row;
-    flex-wrap: wrap;
-}
-.game-card {
-    width: min-content;
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 10px 10px;
-    border-radius: 14px;
-    box-shadow: -1px 15px 30px -12px black;
-    background-color: #ffffff;
-    color: black;
+    align-items: center;
+    background: #202d39;
+    margin: auto;
+    margin-bottom: 5px;
+    background: rgba( 0, 0, 0, 0.2 );
     text-decoration: none;
+    color: #c7d5e0;
 }
-.game-card:hover{
-    transform: scale(1.05);
-    transition: transform 300ms;
+.game-info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.game-card:hover {
+    background: rgba( 0, 0, 0, 0.4 );
+}
+.card-thumb{
+    display: block;
+    width: 175px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-color: #13171e;
 }
 .game-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px 10px;
-    text-align: center;
-}
-.game-price{
-    width: fit-content;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #511DA7;
-    color: #ffffff;
-}
-span{
-    width: 175px;
-    height: 175px;
-    background-size: cover;
-    display: block;
-    border-radius: 14px 14px 0 0;
+    margin-left: 10px;
 }
