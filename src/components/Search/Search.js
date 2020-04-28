@@ -13,7 +13,7 @@ class Search extends Component{
     this.state = {
       value: '',
       games: [],
-      isFocus: true
+      isFocus: false
     }
   }
 
@@ -38,6 +38,14 @@ class Search extends Component{
     this.setState({value : input.value})
     this.getGames(input.value)
   }
+
+  handleFocus = () => {
+    this.setState({isFocus: true})
+  }
+
+  handleBlur = () => {
+    this.setState({isFocus: false})
+  }
   
   render(){
     const { games, isFocus } = this.state;
@@ -51,6 +59,8 @@ class Search extends Component{
             id="main-search"
             name="search"
             value={this.state.value}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
             onChange={(event) => {
               this.handleChange(event)
             }}
