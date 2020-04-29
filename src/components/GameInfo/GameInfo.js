@@ -14,21 +14,20 @@ class GameInfo extends Component {
 
    
    render() {
-       console.log("je suis dans gameinfo, do i have thes infos ?", this.props.match.params.gameID)
-       const gameid=  this.props.match.params.gameID
-
+      const deals = this.props.location.state.game.deals
+      const dealId = deals[0].dealID
+      console.log("suis dans le dealid", dealId)
     return(
         
             <div style={gameInfoStyle}>  
 
                     <Image imgurl= {this.props.location.state.game.thumb} />
 
-                    <RatingNotes gameid= { gameid } />
+                    <RatingNotes   deals= {dealId} />
                     
                     <PriceList price= {this.props.location.state.game.deals[0].price} /> 
 
                   
-
              </div>
         );
     }

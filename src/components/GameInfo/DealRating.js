@@ -8,34 +8,26 @@ const boxOne={
     marginLeft: "0px"
 }
 
-const note={
-    width: "70px",
-    marginLeft: "30px",
-    marginTop: "30px"
-}
-
 class DealRating extends Component {
 
     
     getDealRating =(id)=>{
-        console.log("Hello", this.props.gameid )
+       console.log(this.props.deals)
     }
 
     componentDidMount (){
-        this.getDealRating(this.props.gameID)
+        this.getDealRating(this.props.deals)
         console.log(this.props.location)
     }
 
 
     render(){
-      console.log("je suis dans dealrating", this.props.gameid)
         return(
             
              <div style={boxOne}>
-                    <img src= {this.props.gameid} alt={this.props.gameid} style={note} />
+                    <p> {this.props.deals} </p>
                      
-                    </div>
-                     
+                    </div>                
             
         );
     }

@@ -8,22 +8,18 @@ const boxTwo={
     marginLeft: "0px"
 }
 
-const note={
-    width: "70px",
-    marginLeft: "30px",
-    marginTop: "30px"
-}
 
 
 
 class Note extends Component {
-    
+   
     getGame=(id)=>{
-     console.log("im here" , this.props.note)
+     console.log("im here" , this.props.deals)
     }
 
+
     componentDidMount(){
-        this.getGame(this.props.gameID)
+        this.getGame(this.props.deals)
     }
 
 
@@ -32,7 +28,7 @@ class Note extends Component {
             
             <div style={boxTwo}>
 
-              <img src= {this.props.note} alt={this.props.note} style={note} />
+              <p> {this.props.dealid}  </p>
                      
             </div>
         );
