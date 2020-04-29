@@ -12,14 +12,15 @@ const boxTwo={
 
 
 class Note extends Component {
-   
+  
+
     getGame=(id)=>{
-     console.log("im here" , this.props.deals)
+     console.log("im here" , this.props.dealID)
     }
 
 
     componentDidMount(){
-        this.getGame(this.props.deals)
+        this.getGame(this.props.dealID)
     }
 
 
@@ -28,7 +29,7 @@ class Note extends Component {
             
             <div style={boxTwo}>
 
-              <p> {this.props.dealid}  </p>
+              <p> {this.props.dealId}  </p>
                      
             </div>
         );

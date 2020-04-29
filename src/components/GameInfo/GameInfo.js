@@ -16,18 +16,19 @@ class GameInfo extends Component {
    render() {
       const deals = this.props.location.state.game.deals
       const dealId = deals[0].dealID
-      console.log("suis dans le dealid", dealId)
+      console.log("Je suis dans le dealid", dealId)
     return(
         
             <div style={gameInfoStyle}>  
 
-                    <Image imgurl= {this.props.location.state.game.thumb} />
+                    <Image imgurl = {this.props.location.state.game.thumb} />
 
-                    <RatingNotes   deals= {dealId} />
+                    <RatingNotes   deals = {dealId} />
                     
-                    <PriceList price= {this.props.location.state.game.deals[0].price} /> 
+                    <PriceList price = {this.props.location.state.game.deals[0].price} /> 
 
                   
+
              </div>
         );
     }

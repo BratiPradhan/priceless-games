@@ -11,13 +11,12 @@ const theBoxe= {
 
 
 const RatingNotes = (props) => {     
-console.log("je suis dans rating notes" , props.deals)
 
         return(
 
              <div style={theBoxe}>
-                  <DealRating gameid={props.deals} />
-                  <Note note={props.deals} />
+                  <DealRating dealId = {props.dealId} />
+                  <Note note = {props.deals} />
              </div>  
         );
     }
