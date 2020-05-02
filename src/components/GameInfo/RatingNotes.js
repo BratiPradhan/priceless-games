@@ -10,14 +10,14 @@ const theBoxe= {
 }
 
 
-const RatingNotes = (props) => { 
+const RatingNotes = ({dealId}) => { 
    
 
         return(
 
              <div style={theBoxe}>
-                  <DealRating dealId = {props.dealId} />
-                  <Note dealId = {props.dealId} />
+                  <DealRating dealId = {dealId} />
+                  <Note dealId = {dealId} />
              </div>  
         );
     }
