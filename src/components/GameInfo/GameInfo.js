@@ -21,11 +21,11 @@ class GameInfo extends Component {
         
             <div style={gameInfoStyle}>  
 
-                    <Image imgurl = {this.props.location.state.game.thumb} />
+                    <Image imgurl={this.props.location.state.game.thumb} />
 
-                    <RatingNotes   dealId = {dealId} />
+                    <RatingNotes   dealId={dealId} />
                     
-                    <PriceList price = {this.props.location.state.game.deals[0].price} /> 
+                    <PriceList price={this.props.location.state.game.deals[0].price} /> 
 
                   
 

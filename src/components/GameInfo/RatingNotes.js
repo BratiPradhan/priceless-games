@@ -16,8 +16,8 @@ const RatingNotes = (props) => {
         return(
 
              <div style={theBoxe}>
-                  <DealRating dealId = {props.dealId} />
-                  <Note dealId = {props.dealId} />
+                  <DealRating dealId={props.dealId} />
+                  <Note dealId={props.dealId} />
              </div>  
         );
     }

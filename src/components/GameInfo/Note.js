@@ -1,14 +1,28 @@
 import React from 'react';
 import axios from 'axios';
 
-const boxTwo={
+const boxTwo = {
     width: "130px",
     height: "140px",
     border: "1px solid yellow",    
     marginTop: "10px",
-    marginLeft: "0px"
+    marginLeft: "0px",
+    
 }
 
+const note = {
+    marginLeft: "7.5px",
+    marginTop: "20px",
+    color: "#e040fb"
+
+}
+
+const noteValue = {
+    marginTop: "40px",
+    marginLeft: "45px",
+    color: "#ff4081"
+
+}
 
 
 
@@ -51,8 +65,8 @@ class Note extends React.Component {
         return(
             
             <div style={boxTwo}>
-
-                <h1> {this.state.note} </h1>
+                  <p style={note}>La note du jeu</p>
+                <h1 style={noteValue}>{this.state.note}</h1>
                      
             </div>
         );
