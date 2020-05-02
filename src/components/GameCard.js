@@ -52,7 +52,9 @@ class GameCard extends Component {
                     <div className="game-info">
                         <p>{game.info.title}</p>
                     </div>
-                    <div className="game-price">{game.deals[0].price} $</div>
+                    <div className="game-price">
+                        <p>{game.deals[0].price} $</p>
+                    </div>
                 </div>
             </Link>
         )
