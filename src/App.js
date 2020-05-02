@@ -3,6 +3,7 @@ import Search from './components/Search';
 import {Switch, Route} from 'react-router-dom';
 import GameList from './components/GamesList'
 import GameInfo from './components/GameInfo/GameInfo'
+import './App.css'
 
 function App() {
 
