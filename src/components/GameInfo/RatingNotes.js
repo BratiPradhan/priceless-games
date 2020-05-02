@@ -11,16 +11,14 @@ const theBoxe= {
 
 
 const RatingNotes = (props) => { 
-   
+     return(
 
-        return(
-
-             <div style={theBoxe}>
-                  <DealRating dealId={props.dealId} />
-                  <Note dealId={props.dealId} />
-             </div>  
-        );
-    }
+          <div style={theBoxe}>
+               <DealRating price={props.dealId} />
+               <Note dealId={props.dealId} />
+          </div>  
+     );
+}
 
     
-    export default RatingNotes
+export default RatingNotes

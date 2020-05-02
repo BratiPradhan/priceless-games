@@ -4,7 +4,7 @@ import axios from 'axios';
 const boxTwo = {
     width: "130px",
     height: "140px",
-    border: "1px solid yellow",    
+    border: "1px solid #e040fb",    
     marginTop: "10px",
     marginLeft: "0px",
     
@@ -13,7 +13,7 @@ const boxTwo = {
 const note = {
     marginLeft: "7.5px",
     marginTop: "20px",
-    color: "#e040fb"
+    color: "#ff4081"
 
 }
 
@@ -28,28 +28,27 @@ const noteValue = {
 
 class Note extends React.Component {
     constructor(props){
-           super(props);
-         this.state= {
-             note: 0
-         };
+        super(props);
+        this.state= {
+            note: 0
+        };
         
-        }
+    }
     
     getGame=(id)=>{ 
-     console.log("im in get game" , id)
-            
-            axios.get(`https://www.cheapshark.com/api/1.0/deals?id=${id}`)
-            .then( response => {
-              return  response.data
-            })
-            .then(data => {
-              const metacriticScore = data.gameInfo.metacriticScore;
-              this.setState({note: metacriticScore})
+     console.log("im in get game" , id)   
+        axios.get(`https://www.cheapshark.com/api/1.0/deals?id=${id}`)
+        .then( response => {
+            return  response.data
+        })
+        .then(data => {
+            const metacriticScore = data.gameInfo.metacriticScore;
+            this.setState({note: metacriticScore})
               
-            }) 
-            .catch( error => {
-                console.log(error);
-            })     
+        }) 
+        .catch( error => {
+            console.log(error);
+        })     
     
     }
 
@@ -58,17 +57,16 @@ class Note extends React.Component {
         console.log(dealId, 'here my dealid')
         this.getGame(dealId)
        
-       }
+    }
 
 
     render(){
         return(
             
-            <div style={boxTwo}>
-                  <p style={note}>La note du jeu</p>
-                <h1 style={noteValue}>{this.state.note}</h1>
-                     
-            </div>
+           <div style={boxTwo}>
+                <p style={note}>La note du jeu</p>
+                <h1 style={noteValue}>{this.state.note}</h1>   
+          </div>
         );
     }
 }
