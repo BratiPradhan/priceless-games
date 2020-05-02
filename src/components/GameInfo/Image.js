@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 
+
 const priceStyle= {
     
     width: "300px", 
