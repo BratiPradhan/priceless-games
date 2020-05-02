@@ -33,13 +33,13 @@ const sourceFive= {
 }
 
 
-class PriceList extends Component {
-    render(){
+const PriceList =(props) => {
+  
         return(
 
                 <div style={noteStyle}>
                         <ul style={source}>
-                                <li style={sourceOne}>Source................Prix</li> 
+                                <li style={sourceOne}> {props.price} $ </li> 
                                 <li style={sourceTwo}>Source................Prix</li>
                                 <li style={sourceTree}>Source................Prix</li>
                                 <li style={sourceFour}>Source................Prix</li>
@@ -49,6 +49,6 @@ class PriceList extends Component {
         );        
     }    
 
-}    
+  
 
 export default PriceList
