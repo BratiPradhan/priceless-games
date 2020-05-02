@@ -41,15 +41,20 @@ class GameCard extends Component {
         const { gameID } = this.props
         const thumb = {backgroundImage: `url(${this.props.thumb})`}
         return(
-            <Link to={{
-                pathname: `/game/${gameID}`,
-                state: { game: game }
-            }} 
-                className="game-card">
-                <span style={thumb}></span>
-                <div className="game-info">
-                    <p>{game.info.title}</p>
-                    <p className="game-price">{game.deals[0].price} $</p>
+            <Link 
+                className="game-card" 
+                to={{
+                    pathname: `/game/${gameID}`,
+                    state: { game: game }
+                }}>
+                <span className='card-thumb' style={thumb}></span>
+                <div className="game-info-container">
+                    <div className="game-info">
+                        <p>{game.info.title}</p>
+                    </div>
+                    <div className="game-price">
+                        <p>{game.deals[0].price} $</p>
+                    </div>
                 </div>
             </Link>
         )
