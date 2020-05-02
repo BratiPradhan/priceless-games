@@ -5,6 +5,7 @@ import GameList from './components/GamesList'
 import GameInfo from './components/GameInfo/GameInfo'
 import './App.css'
 import Navbar from './components/Navbar'
+import Deals from './components/BestDeals/Deals'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         </Route>
         <Route path="/search" component={GameList} />
         <Route path="/game/:gameID" component={GameInfo} />
+        <Route path="/deals" component={Deals} />
       </Switch>
     </>
   )
