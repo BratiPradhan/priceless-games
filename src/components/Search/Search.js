@@ -69,7 +69,7 @@ class Search extends Component{
           />
         </form>
 
-        { isFocus ? <SearchList games={games.slice(0,5)} /> : "" }
+        { isFocus && <SearchList games={games.slice(0,5)} /> }
 
       </div>
     )
