@@ -23,7 +23,7 @@ class GameInfo extends Component {
 
                     <Image imgurl = {this.props.location.state.game.thumb} />
 
-                    <RatingNotes   deals = {dealId} />
+                    <RatingNotes   dealId = {dealId} />
                     
                     <PriceList price = {this.props.location.state.game.deals[0].price} /> 
 

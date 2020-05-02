@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 const boxOne={
     width: "130px",
@@ -8,7 +8,7 @@ const boxOne={
     marginLeft: "0px"
 }
 
-class DealRating extends Component {
+class DealRating extends React.Component {
 
     
     getDealRating =(id)=>{
