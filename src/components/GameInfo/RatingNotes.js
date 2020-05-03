@@ -8,15 +8,17 @@ const theBoxe= {
     marginTop: "250px"
 }
 
-const RatingNotes = (props) => { 
-     return(
+const RatingNotes = ({dealId}) => { 
+   
 
-          <div style={theBoxe}>
-               <DealRating dealId={props.dealId} />
-               <Note dealId={props.dealId} />
-          </div>  
-     );
-}
+        return(
+
+             <div style={theBoxe}>
+                  <DealRating dealId = {dealId} />
+                  <Note dealId = {dealId} />
+             </div>  
+        );
+    }
 
     
 export default RatingNotes

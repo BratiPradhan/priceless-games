@@ -11,12 +11,10 @@ const gameInfoStyle= {
 
 
 class GameInfo extends Component {
-
-   
    render() {
       const deals = this.props.location.state.game.deals
       const dealId = deals[0].dealID
-      console.log("Je suis dans le dealid", dealId)
+      console.log(deals)
     return(
         
             <div style={gameInfoStyle}>  
@@ -24,10 +22,8 @@ class GameInfo extends Component {
                     <Image imgurl={this.props.location.state.game.thumb} />
 
                     <RatingNotes dealId={dealId} />
-                    
-                    <PriceList price={this.props.location.state.game.deals[0].price} /> 
 
-                  
+                    <PriceList deals={deals} /> 
 
              </div>
         );

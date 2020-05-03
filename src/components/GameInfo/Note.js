@@ -23,25 +23,30 @@ class Note extends React.Component {
         super(props);
         this.state= {
             note: 0
-        };    
+
+        };
     }
-    getGame=(id)=>{  
+    
+    getGame=(id)=>{ 
         axios.get(`https://www.cheapshark.com/api/1.0/deals?id=${id}`)
         .then( response => {
-            return  response.data
+            return response.data
         })
         .then(data => {
             const metacriticScore = data.gameInfo.metacriticScore;
-            this.setState({note: metacriticScore})     
+            this.setState({note: metacriticScore})
         }) 
         .catch( error => {
             console.log(error);
         })     
+
     }
+    
     componentDidMount(){
-        const dealId= this.props.dealId
-        this.getGame(dealId)   
+        const { dealId } = this.props
+        this.getGame(dealId)
     }
+
     render(){
         return(
             
