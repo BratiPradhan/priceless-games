@@ -5,8 +5,6 @@ const boxTwo = {
     width: "130px",
     height: "140px",
     border: "1px solid #e040fb",    
-    marginTop: "10px",
-    marginLeft: "0px",    
 }
 const note = {
     marginTop: "20px",
@@ -52,7 +50,7 @@ class Note extends React.Component {
             
            <div style={boxTwo}>
                 <p style={note}>Note</p>
-                <h1 style={noteValue}>{this.state.note}</h1>   
+                <h2 style={noteValue}>{this.state.note} %</h2>   
           </div>
         );
     }

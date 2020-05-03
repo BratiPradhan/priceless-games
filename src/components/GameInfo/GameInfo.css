@@ -1,0 +1,56 @@
+.game-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.game-main h1 {
+    width: 80%;
+    font-size: 5em;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid black;
+}
+
+.game-main-deals{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.note-boxes{
+    display: flex;
+    flex-direction: column;
+}
+
+.note-boxes > * {
+    margin-bottom: 20px;
+}
+
+.best-deal{
+    display: block;
+    width: 130px;
+    height: 140px;
+    border: 1px solid #e040fb;
+    margin-left: 0px;
+    text-align: center;
+    color: #69f0ae;
+}
+.best-deal:hover{
+    background-color: rgba(224, 64, 251, 0.22);
+}
+
+.price-list{
+    width: 350px;
+    text-align: center;
+}
+
+.price-list h2 {
+    margin-bottom: 10px;
+}

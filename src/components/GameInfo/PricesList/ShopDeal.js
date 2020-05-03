@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './PriceList.css'
 
 class ShopDeal extends Component{
     constructor(props){
@@ -23,13 +24,22 @@ class ShopDeal extends Component{
     }
 
     render(){
-        const { storeID, dealID, price, savings } = this.props
+        const { storeID, dealID, price, savings } = this.props;
+        const { stores } = this.state;
+        const currentStore = stores.filter(store => store.storeID === storeID)
+        const storeName = currentStore.map(store => store.storeName)
+        const storeIcon = currentStore.map(store => store.images.icon)
+        
         return(
-            <div>
-                <a href={`https://www.cheapshark.com/redirect?dealID=${dealID}`}>
-                    {storeID} / {price} / -{savings}%
-                </a>
-            </div>
+            <a className="store-price" href={`https://www.cheapshark.com/redirect?dealID=${dealID}`}>
+                <div className="store-price-info">
+                    <img src={`https://www.cheapshark.com${storeIcon}`} />
+                    <p>{storeName}</p>
+                </div>
+                <div className="store-pricing">
+                <p> -{Math.round(savings)}% | {price} $</p>
+                </div>
+            </a>
         )
     }
 }

@@ -2,15 +2,15 @@ import React from 'react'
 import ShopDeal from './ShopDeal'
 
 const noteStyle= {
-    width: "300px",
-    marginLeft: "120px",
-    marginTop:"230px"
+    width: "350px",
+    textAlign: 'center',
 }
 
 const PriceList = ({deals}) => {
     const dealsList = deals
         return(
-            <div style={noteStyle}>
+            <div className="price-list">
+                <h2>Find the best deals</h2>
                 {dealsList.map(deal => <ShopDeal key={deal.storeID} {...deal} />)}
             </div>
         );        

@@ -1,15 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-const boxOne={
-    width: "130px",
-    height: "140px",
-    border: "1px solid #e040fb",    
-    marginTop: "2px",
-    marginLeft: "0px",
-    textAlign: "center",
-    color: "#69f0ae"
-}
 const price={
     marginTop: "30px",
 }
@@ -46,8 +37,9 @@ class DealRating extends React.Component {
 
     render(){
         const { dealID } = this.props
+        const dealUrl = `https://www.cheapshark.com/redirect?dealID=${dealID}`
         return(  
-            <div style={boxOne}>
+            <a href={dealUrl} className="best-deal">
                 <p style={priceValue}>Best deal</p>
                 <h2 style={price}>{this.state.price} $</h2>
                 <a className="button" 
@@ -55,7 +47,7 @@ class DealRating extends React.Component {
                     target="_blank"> 
                     Buy ! 
                 </a>
-            </div>                
+            </a>                
             
         );
     }
