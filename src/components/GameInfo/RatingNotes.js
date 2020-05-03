@@ -6,9 +6,7 @@ const theBoxe= {
     width: "300px",
     marginLeft: "100px",
     marginTop: "250px"
-
 }
-
 
 const RatingNotes = ({dealId}) => { 
    
@@ -23,4 +21,4 @@ const RatingNotes = ({dealId}) => {
     }
 
     
-    export default RatingNotes
+export default RatingNotes
