@@ -1,6 +1,8 @@
 #root {
     height: 100%;
     max-width: 1250px; 
-    display: flex;
     margin: auto;
+}
+.main-nav{
+    background-color: rgba( 62, 126, 167, 0.8);
 }
