@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import DealCard from './DealCard'
+import LoaderSpin from '../Loader'
+import './Deals.css'
 
 class Deals extends Component {
     constructor(props){
@@ -33,9 +35,9 @@ class Deals extends Component {
     render(){
         const { deals, isLoading } = this.state;
         return(
-            <div className="game-list-rows">            
+            <div className="game-list-rows">          
                 {isLoading
-                    ? "loading"
+                    ? <LoaderSpin />
                     : deals.map((deal, i) => <DealCard key={i} {...deal} />)
                 }
             </div>
