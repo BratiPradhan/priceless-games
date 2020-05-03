@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
+import GameCard from './GameCard';
 
-const GameList = () => {
-    return(
-        <h1>Hello world</h1>
-    )
+class GameList extends Component{
+    render(){
+        const games = this.props.location.state.games
+        return(
+            <div className="game-list-rows">
+                {
+                games.map(game => 
+                    <GameCard
+                        key={game.gameID}
+                        {...game}
+                    />)
+                }
+            </div>
+        )
+    }
 }
 
 export default GameList

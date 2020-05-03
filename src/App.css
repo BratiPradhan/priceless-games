@@ -1,0 +1,31 @@
+#root {
+    height: 100%;
+    max-width: 1250px; 
+    margin: auto;
+}
+.main-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba( 62, 126, 167, 0.8);
+    padding: 10px 10px;
+    border-radius: 0 0 15px 15px;
+}
+
+.main-nav a {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.main-nav a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.home-container{
+    display: flex;
+    padding-top: 2em;
+}
+
+.game-list-rows{
+    margin: 50px;
+}

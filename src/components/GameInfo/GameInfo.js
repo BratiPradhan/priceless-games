@@ -1,0 +1,25 @@
+import React, { Component } from 'react';
+import Image from './Image';
+import PriceList from './PricesList/PriceList';
+import RatingNotes from './RatingNotes';
+import './GameInfo.css'
+
+class GameInfo extends Component {
+   render() {
+      const { deals, thumb } = this.props.location.state.game
+      const { title } = this.props.location.state.game.info
+      const dealID = deals[0].dealID
+    return(
+        
+            <div className="game-main"> 
+                <Image imgurl={thumb} title={title} />
+                <div className="game-main-deals">
+                    <RatingNotes dealID={dealID} />
+                    <PriceList deals={deals} /> 
+                </div>
+             </div>
+        );
+    }
+}
+
+export default GameInfo
