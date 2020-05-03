@@ -6,15 +6,13 @@ const theBoxe= {
     width: "300px",
     marginLeft: "100px",
     marginTop: "250px"
-
 }
-
 
 const RatingNotes = (props) => { 
      return(
 
           <div style={theBoxe}>
-               <DealRating price={props.dealId} />
+               <DealRating dealId={props.dealId} />
                <Note dealId={props.dealId} />
           </div>  
      );
