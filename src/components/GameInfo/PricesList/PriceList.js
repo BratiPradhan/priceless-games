@@ -1,4 +1,5 @@
 import React from 'react'
+import ShopDeal from './ShopDeal'
 
 const noteStyle= {
     width: "300px",
@@ -10,7 +11,7 @@ const PriceList = ({deals}) => {
     const dealsList = deals
         return(
             <div style={noteStyle}>
-                {dealsList.map(deal => console.log(deal))}
+                {dealsList.map(deal => <ShopDeal key={deal.storeID} {...deal} />)}
             </div>
         );        
     }    

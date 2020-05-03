@@ -12,7 +12,6 @@ const RatingNotes = ({dealId}) => {
    
 
         return(
-
              <div style={theBoxe}>
                   <DealRating dealId = {dealId} />
                   <Note dealId = {dealId} />

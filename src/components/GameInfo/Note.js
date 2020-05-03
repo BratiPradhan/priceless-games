@@ -9,14 +9,14 @@ const boxTwo = {
     marginLeft: "0px",    
 }
 const note = {
-    marginLeft: "7.5px",
     marginTop: "20px",
-    color: "#ff4081"
+    color: "#ff4081",
+    textAlign: 'center'
 }
 const noteValue = {
-    marginTop: "40px",
-    marginLeft: "45px",
-    color: "#ff4081"
+    marginTop: "30px",
+    color: "#ff4081",
+    textAlign: 'center'
 }
 class Note extends React.Component {
     constructor(props){
@@ -51,7 +51,7 @@ class Note extends React.Component {
         return(
             
            <div style={boxTwo}>
-                <p style={note}>La note du jeu</p>
+                <p style={note}>Note</p>
                 <h1 style={noteValue}>{this.state.note}</h1>   
           </div>
         );

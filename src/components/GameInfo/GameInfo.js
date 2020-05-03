@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Image from './Image';
-import PriceList from './PriceList';
+import PriceList from './PricesList/PriceList';
 import RatingNotes from './RatingNotes';
 
 

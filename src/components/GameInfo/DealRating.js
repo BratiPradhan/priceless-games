@@ -10,13 +10,13 @@ const boxOne={
 }
 const price={
     marginTop: "40px",
-    marginLeft: "20px",
+    textAlign: "center",
     color:"#69f0ae"
 }
 const priceValue={
-    marginLeft: "20px",
     marginTop: "20px",
-    color: "#69f0ae"
+    color: "#69f0ae",
+    textAlign: "center"
 }
 
 class DealRating extends React.Component {
@@ -26,6 +26,7 @@ class DealRating extends React.Component {
             price: 0
         };    
     }
+
     getDealRating =(id)=>{
        axios.get(`https://www.cheapshark.com/api/1.0/deals?id=${id}`)
        .then( response => {
@@ -39,14 +40,16 @@ class DealRating extends React.Component {
            console.log(error);
        })     
    }
+
     componentDidMount (){
         const dealId= this.props.dealId
         this.getDealRating(dealId)   
     }
+
     render(){
         return(  
             <div style={boxOne}>
-                <p style={priceValue}>Le bon Prix</p>
+                <p style={priceValue}>Best deal</p>
                 <h1 style={price}>{this.state.price}$</h1>    
             </div>                
             

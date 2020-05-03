@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './components/Search/Search';
+import Home from './components/Home'
 import {Switch, Route} from 'react-router-dom';
 import GameList from './components/GamesList'
 import GameInfo from './components/GameInfo/GameInfo'
@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <Search />
+          <Home />
         </Route>
         <Route path="/search" component={GameList} />
         <Route path="/game/:gameID" component={GameInfo} />
