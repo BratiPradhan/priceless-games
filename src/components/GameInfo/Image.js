@@ -8,16 +8,16 @@ const priceStyle= {
     marginTop: "250px"
 }
 const image={
-    width: "300px",
-    height: "300px"
+    width: "300px"
 }
 
-const Image = ({imgurl}) =>{
+const Image = ({imgurl, title}) =>{
   
         return(
 
                 <div style={priceStyle}>
-                <img src={imgurl} alt="image" style={image} />    
+                    <h1>{title}</h1>
+                    <img src={imgurl} alt="image" style={image} /> 
                 </div>
 
          );
