@@ -43,8 +43,8 @@ class Note extends React.Component {
     }
     
     componentDidMount(){
-        const { dealId } = this.props
-        this.getGame(dealId)
+        const { dealID } = this.props
+        this.getGame(dealID)
     }
 
     render(){

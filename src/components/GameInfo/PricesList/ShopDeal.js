@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class ShopDeal extends Component{
     constructor(props){
         super(props);
         this.state = {
-
+            stores: []
         }
+    }
+
+    componentDidMount = () => {
+        this.getStore();
+    }
+
+    getStore = () => {
+        axios.get("https://www.cheapshark.com/api/1.0/stores")
+            .then(res => res.data)
+            .then(data => {
+                const stores = data;
+                this.setState({stores})
+            })
     }
 
     render(){

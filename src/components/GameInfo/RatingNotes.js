@@ -8,13 +8,12 @@ const theBoxe= {
     marginTop: "250px"
 }
 
-const RatingNotes = ({dealId}) => { 
-   
+const RatingNotes = ({dealID}) => { 
 
         return(
              <div style={theBoxe}>
-                  <DealRating dealId = {dealId} />
-                  <Note dealId = {dealId} />
+                  <DealRating dealID={dealID} />
+                  <Note dealID={dealID} />
              </div>  
         );
     }

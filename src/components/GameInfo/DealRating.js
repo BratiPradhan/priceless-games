@@ -6,17 +6,15 @@ const boxOne={
     height: "140px",
     border: "1px solid #e040fb",    
     marginTop: "2px",
-    marginLeft: "0px"
+    marginLeft: "0px",
+    textAlign: "center",
+    color: "#69f0ae"
 }
 const price={
-    marginTop: "40px",
-    textAlign: "center",
-    color:"#69f0ae"
+    marginTop: "30px",
 }
 const priceValue={
     marginTop: "20px",
-    color: "#69f0ae",
-    textAlign: "center"
 }
 
 class DealRating extends React.Component {
@@ -42,15 +40,21 @@ class DealRating extends React.Component {
    }
 
     componentDidMount (){
-        const dealId= this.props.dealId
-        this.getDealRating(dealId)   
+        const { dealID } = this.props
+        this.getDealRating(dealID)   
     }
 
     render(){
+        const { dealID } = this.props
         return(  
             <div style={boxOne}>
                 <p style={priceValue}>Best deal</p>
-                <h1 style={price}>{this.state.price}$</h1>    
+                <h2 style={price}>{this.state.price} $</h2>
+                <a className="button" 
+                    href={`https://www.cheapshark.com/redirect?dealID=${dealID}`} 
+                    target="_blank"> 
+                    Buy ! 
+                </a>
             </div>                
             
         );
