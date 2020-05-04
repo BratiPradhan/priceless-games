@@ -42,10 +42,13 @@ class Note extends React.Component {
     render(){
         const { note, link } = this.state
         return(
-           <a href={`https://www.metacritic.com/${link}`} className="note">
+           <a href={`https://www.metacritic.com${link}`} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="note">
                 <p className="note-title">Game score</p>
                 <h2 style={noteValue}>{note} %</h2> 
-                <p>Go to review</p>  
+                <p>Get more info</p>  
           </a>
         );
     }

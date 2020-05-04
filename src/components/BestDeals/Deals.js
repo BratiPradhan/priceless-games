@@ -19,7 +19,7 @@ class Deals extends Component {
 
     getDeals = () => {
         this.setState({isLoading: true}, () => {
-            axios.get('https://www.cheapshark.com/api/1.0/deals?pageSize=20')
+            axios.get('https://www.cheapshark.com/api/1.0/deals?pageSize=20&sortBy=Reviews')
             .then(res => res.data)
             .then(data => {
                 const deals = data;
