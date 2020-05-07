@@ -12,7 +12,7 @@ class Deals extends Component {
         this.state = {
             deals: [],
             isLoading: false, 
-            sortBy: 'Reviews'
+            sortBy: 'Price'
         }
     }
 
@@ -50,14 +50,15 @@ class Deals extends Component {
     render(){
         const { deals, isLoading } = this.state;
         return(
-           <div>
-                 <Select handleSelectedFilter={this.handleSelectedFilter} /> 
-             <div className="game-list-rows">         
-                   {isLoading
-                       ? <LoaderSpin />
-                       : deals.map((deal, i) => <DealCard key={i} {...deal} />)
-                    }
-             </div>
+            <div className="deals-container container">
+                <h2>Discover the bests deals</h2>
+                <Select handleSelectedFilter={this.handleSelectedFilter} />
+                <div className="deals-list-rows">          
+                    {isLoading
+                        ? <LoaderSpin />
+                        : deals.map((deal, i) => <DealCard key={i} {...deal} />)
+                        }
+                </div>
             </div> 
         )
     }
