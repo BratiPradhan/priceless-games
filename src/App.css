@@ -32,6 +32,10 @@
 .banner{
     background-color: #1b2838;
 }
+.banner-container{
+    display: flex;
+    flex-direction: row;
+}
 .banner-elem{
     width: 50%;
 }
@@ -45,6 +49,61 @@
     font-weight: 300;
     margin: 0 0 20px;
 }
+.banner-text p{
+    line-height: 28px;
+    font-size: 19px;
+    margin: 0 0 20px;
+}
+.img-container{
+    display: flex;
+}
+.banner-img{
+    max-width: 100%;
+    margin: auto;
+}
 .game-list-rows{
     margin: 50px;
+}
+
+/* Main content section */
+.main-content{
+    background-color: #36abde;
+}
+.main-content-section{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+}
+.col-txt{
+    width: 50%;
+}
+.col-img{
+    width: 50%;
+}
+.main-text{
+    padding: 75px 0 50px 50px;
+    max-width: 400px;
+}
+.main-text h2{
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 45px;
+    margin-bottom: 30px;
+}
+.main-text p{
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+}
+.main-img-1{
+    background-image: url(https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.main-img-2{
+    background-image: url(https://images.unsplash.com/photo-1514464750060-00e6e34c8b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
