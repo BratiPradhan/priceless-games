@@ -5,6 +5,7 @@ import LoaderSpin from '../Loader'
 import './Deals.css'
 import Select from './Select'
 
+
 class Deals extends Component {
     constructor(props){
         super(props);
@@ -49,14 +50,15 @@ class Deals extends Component {
     render(){
         const { deals, isLoading } = this.state;
         return(
-            <div className="game-list-rows">   
-               <Select handleSelectedFilter={this.handleSelectedFilter} />       
-                {isLoading
-                    ? <LoaderSpin />
-                    : deals.map((deal, i) => <DealCard key={i} {...deal} />)
-                }
-             
-            </div>
+           <div>
+                 <Select handleSelectedFilter={this.handleSelectedFilter} /> 
+             <div className="game-list-rows">         
+                   {isLoading
+                       ? <LoaderSpin />
+                       : deals.map((deal, i) => <DealCard key={i} {...deal} />)
+                    }
+             </div>
+            </div> 
         )
     }
 }

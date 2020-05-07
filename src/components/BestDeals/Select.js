@@ -1,5 +1,13 @@
 import React from 'react';
 
+const section = {
+  marginLeft:'890px',
+  marginTop: '40px'
+  
+}
+const option = {
+  color: '#1a237e'
+}
 
 class Select extends React.Component{
     
@@ -7,11 +15,12 @@ class Select extends React.Component{
   render(){
   
     return(
-      <div>
+      <div style={section}>
        <select onChange={this.props.handleSelectedFilter}>
-          <option value="recent">Nouveau</option>
-          <option value="Price">Prix</option>
-          <option value="Metacritic">Note</option>
+         <option style={option} value=""></option>
+          <option style={option} value="recent">Nouveau</option>
+          <option style={option} value="Price">Prix</option>
+          <option  style={option} value="Metacritic">Note</option>
       </select>
       </div>
     );
