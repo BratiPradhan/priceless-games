@@ -31,14 +31,32 @@
 
 .note-boxes > * {
     margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.note{
+    display: block;
+    width: 200px;
+    height: 200px;
+    font-size: x-large;
+    border: 1px solid #e040fb;
+}
+.note-title{
+    margin-top: 20px;
+    color: #ff4081;
+    text-align: center;
+}
+.note:hover {
+    background-color: rgba(224, 64, 251, 0.22)
 }
 
 .best-deal{
     display: block;
-    width: 130px;
-    height: 140px;
+    width: 200px;
+    height: 200px;
     border: 1px solid #e040fb;
     margin-left: 0px;
+    font-size: x-large;
     text-align: center;
     color: #69f0ae;
 }

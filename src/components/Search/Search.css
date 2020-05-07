@@ -15,17 +15,21 @@ input {
   border-bottom: 0.3rem solid transparent;
   transition: all 0.3s;
 }
-
+.direct-search-desult{
+  position: absolute;
+  width: 450px;
+}
 .direct-search-desult a {
   display: flex;
   text-decoration: none;
   color: #fff;
-  background-color: #01012b;
+  background-color: #202d39;
+  border-bottom: 1px solid gray;
   padding: 10px 20px;
   
 }
 .direct-search-desult a:hover {
-  background-color: #511DA7;
+  background-color: #16202b;
 }
 .direct-search-desult a img {
   max-height: 90px;

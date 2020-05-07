@@ -1,18 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
-const boxTwo = {
-    width: "130px",
-    height: "140px",
-    border: "1px solid #e040fb",    
-}
-const note = {
-    marginTop: "20px",
-    color: "#ff4081",
-    textAlign: 'center'
-}
 const noteValue = {
-    marginTop: "30px",
+    marginTop: "20px",
+    marginBottom: "10px",
     color: "#ff4081",
     textAlign: 'center'
 }
@@ -20,8 +11,8 @@ class Note extends React.Component {
     constructor(props){
         super(props);
         this.state= {
-            note: 0
-
+            note: 0,
+            link: ''
         };
     }
     
@@ -31,8 +22,11 @@ class Note extends React.Component {
             return response.data
         })
         .then(data => {
-            const metacriticScore = data.gameInfo.metacriticScore;
-            this.setState({note: metacriticScore})
+            const { metacriticScore, metacriticLink } = data.gameInfo;
+            this.setState({
+                note: metacriticScore,
+                link: metacriticLink
+            })
         }) 
         .catch( error => {
             console.log(error);
@@ -46,12 +40,16 @@ class Note extends React.Component {
     }
 
     render(){
+        const { note, link } = this.state
         return(
-            
-           <div style={boxTwo}>
-                <p style={note}>Note</p>
-                <h2 style={noteValue}>{this.state.note} %</h2>   
-          </div>
+           <a href={`https://www.metacritic.com${link}`} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="note">
+                <p className="note-title">Game score</p>
+                <h2 style={noteValue}>{note} %</h2> 
+                <p>Get more info</p>  
+          </a>
         );
     }
 }
