@@ -35,6 +35,7 @@
 .banner-container{
     display: flex;
     flex-direction: row;
+    padding: 50px 0;
 }
 .banner-elem{
     width: 50%;
@@ -53,6 +54,9 @@
     line-height: 28px;
     font-size: 19px;
     margin: 0 0 20px;
+}
+.banner-text span{
+    text-decoration: underline;
 }
 .img-container{
     display: flex;
@@ -106,4 +110,45 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+/* Business section */
+.business{
+    background-color: #fff;
+    padding: 60px 0;
+}
+.business h2{
+    color: #2daae1;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+.business p {
+    color: black;
+    line-height: 28px;
+    font-size: 19px;
+    margin: 0 0 20px;
+}
+.business-container{
+    display: flex;
+    flex-direction: row;
+}
+.contact-btn{
+    display: inline-block;
+    padding: 20px 10px;
+    background-color: #2daae1;
+    border: 2px solid #2daae1;
+    border-radius: 30px;
+}
+.contact-btn:hover{
+    color: #2daae1;
+    background-color: #fff;
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+footer a{
+    color: #F76C6C;
 }

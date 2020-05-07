@@ -29,10 +29,11 @@ class StoreInfos extends Component{
         const storeName = currentStore.map(store => store.storeName)
         const storeIcon = currentStore.map(store => store.images.icon)
     return(
-        <div>
-            <img src={`https://www.cheapshark.com${storeIcon}`}/>  {storeName} 
-
-        </div>
+        <p className='available-store'>
+            Available on 
+            <img src={`https://www.cheapshark.com${storeIcon}`}/>
+            {storeName} 
+        </p>
     )
     }
 }
