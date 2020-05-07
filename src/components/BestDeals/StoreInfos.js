@@ -27,9 +27,11 @@ class StoreInfos extends Component{
         const { storeID } = this.props
         const currentStore = stores.filter(store => store.storeID === storeID)
         const storeName = currentStore.map(store => store.storeName)
+        const storeIcon = currentStore.map(store => store.images.icon)
     return(
         <div>
-            {storeName} 
+            <img src={`https://www.cheapshark.com${storeIcon}`}/>  {storeName} 
+
         </div>
     )
     }
