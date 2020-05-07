@@ -2,3 +2,13 @@
     width: fit-content;
     margin: auto;
 }
+.game-savings p{
+        color: #a4d007;
+        background: #4c6b22;
+        padding: 0 4px;
+        margin-top: 8px;
+        border-radius: 5px
+}
+.game-savings{
+    margin-right: 10px;
+}
