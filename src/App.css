@@ -22,6 +22,10 @@
     border-bottom: 1px solid #fff;
 }
 
+.nav-alert{
+    align-self: center;
+}
+
 .home-container{
     display: flex;
     padding-top: 2em;
