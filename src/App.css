@@ -35,6 +35,7 @@
 .banner-container{
     display: flex;
     flex-direction: row;
+    padding: 50px 0;
 }
 .banner-elem{
     width: 50%;
@@ -112,6 +113,33 @@
 .business{
     background-color: #fff;
     padding: 60px 0;
+}
+.business h2{
+    color: #2daae1;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+.business p {
+    color: black;
+    line-height: 28px;
+    font-size: 19px;
+    margin: 0 0 20px;
+}
+.business-container{
+    display: flex;
+    flex-direction: row;
+}
+.contact-btn{
+    display: inline-block;
+    padding: 20px 10px;
+    background-color: #2daae1;
+    border: 2px solid #2daae1;
+    border-radius: 30px;
+}
+.contact-btn:hover{
+    color: #2daae1;
+    background-color: #fff;
 }
 
 footer{

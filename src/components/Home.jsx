@@ -1,6 +1,7 @@
 import React from 'react'
 import Search from "./Search/Search"
-import logo from '../imgs/logo.svg'
+import logo from '../imgs/logo-2.svg'
+import logoBizz from '../imgs/business.svg'
 import { FaHeart } from 'react-icons/fa'
 
 const Home = () => {
@@ -49,8 +50,19 @@ const Home = () => {
                 </div>
             </section>
             <section className="business">
-                <div className="container">
-                    
+                <div className="container business-container">
+                    <div className="col-txt">
+                        <div className="main-text">
+                            <h2>Game provider ? Join the adventure !</h2>
+                            <p>You are a company and you provide vidéo games license ?</p>
+                            <br />
+                            <p>Join us and propose your catalog and our website</p>
+                            <a href="mailto:test@test.com" className="contact-btn">Contact for more info</a>
+                        </div>
+                    </div>
+                    <div className="col-img img-container">
+                        <img className='banner-img' src={logoBizz} />
+                    </div>
                 </div>
             </section>
             <footer>
