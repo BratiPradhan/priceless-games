@@ -1,6 +1,7 @@
 import React from 'react'
 import Search from "./Search/Search"
-import logo from '../logo.svg'
+import logo from '../imgs/logo.svg'
+import { FaHeart } from 'react-icons/fa'
 
 const Home = () => {
     return(
@@ -24,7 +25,7 @@ const Home = () => {
                     <div className="main-content-section">
                         <div className="col-txt">
                             <div className='main-text'>
-                                <h2>Games are expensive, right ?</h2>
+                                <h2>Games are too expensive, right ?</h2>
                                 <p> With priceless games, this is no longer a problem!</p>
                                 <br />
                                 <p> Find the best price for your favourite game between 25+ different sales platforms</p>
@@ -40,13 +41,21 @@ const Home = () => {
                         </div>
                         <div className="col-txt main-text">
                             <h2>Be notified when a price drop !</h2>
-                            <p>Price are changing every day. No longer miss a price drop !</p>
+                            <p>Price are changing every day. No longer miss a price drop with our notification system.</p>
                             <br />
-                            <p>Flag a game and get a notification when the price drop on a pltaform</p>
+                            <p>Flag a game and be notified when the price drop on a pltaform</p>
                         </div>
                     </div>
                 </div>
             </section>
+            <section className="business">
+                <div className="container">
+                    
+                </div>
+            </section>
+            <footer>
+                <p>A <a href='https://www.wildcodeschool.com/fr-FR'>WildCodeSchool</a> project made with <FaHeart/> by Basile Raiwet - Vladyslav Zubov - Tiekoura Doumbia</p>
+            </footer>
         </div>
     )
 }

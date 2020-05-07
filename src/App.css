@@ -107,3 +107,17 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/* Business section */
+.business{
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+}
+footer a{
+    color: #F76C6C;
+}
