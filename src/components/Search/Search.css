@@ -15,7 +15,9 @@ input {
   border-bottom: 0.3rem solid transparent;
   transition: all 0.3s;
 }
-
+.direct-search-desult{
+  position: absolute;
+}
 .direct-search-desult a {
   display: flex;
   text-decoration: none;
