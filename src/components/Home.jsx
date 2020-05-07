@@ -54,7 +54,7 @@ const Home = () => {
                     <div className="col-txt">
                         <div className="main-text">
                             <h2>Game provider ? Join the adventure !</h2>
-                            <p>You are a company and you provide vidéo games license ?</p>
+                            <p>You are a company and you provide video game licenses ?</p>
                             <br />
                             <p>Join us and propose your catalog and our website</p>
                             <a href="mailto:test@test.com" className="contact-btn">Contact for more info</a>
