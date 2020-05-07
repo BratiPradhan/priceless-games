@@ -12,7 +12,7 @@ class Deals extends Component {
         this.state = {
             deals: [],
             isLoading: false, 
-            sortBy: 'Price'
+            sortBy: 'Savings'
         }
     }
 

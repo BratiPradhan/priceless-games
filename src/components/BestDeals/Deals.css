@@ -12,6 +12,10 @@
 .game-savings{
     margin-right: 10px;
 }
+.game-price :nth-child(2n){
+    color: gray;
+    text-decoration: line-through;
+}
 .available-store{
     font-size: 12px;
     color: #ffffff6b;

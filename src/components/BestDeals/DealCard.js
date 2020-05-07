@@ -22,9 +22,9 @@ const DealCard = ({gameID, thumb, title, salePrice, dealID, savings, storeID, no
                                 -{Math.round(savings)}%
                             </p>
                         </div>
-                        <div className="game-price" style={{flexDirection:"column"}}>
-                            <p style={{ textDecorationLine: 'line-through' }}>{normalPrice} $</p>
+                        <div className="game-price">
                             <p>{salePrice} $</p>
+                            <p>{normalPrice} $</p>
                         </div>
                     </div>
             </div>

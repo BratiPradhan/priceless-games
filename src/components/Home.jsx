@@ -56,7 +56,7 @@ const Home = () => {
                             <h2>Game provider ? Join the adventure !</h2>
                             <p>You are a company and you provide video game licenses ?</p>
                             <br />
-                            <p>Join us and propose your catalog and our website</p>
+                            <p>Join us, propose your catalogue and increase your sales capacity.</p>
                             <a href="mailto:test@test.com" className="contact-btn">Contact for more info</a>
                         </div>
                     </div>
