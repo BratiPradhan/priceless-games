@@ -1,6 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import ShopDeal from '../GameInfo/PricesList/ShopDeal'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ShopDeal from '../GameInfo/PricesList/ShopDeal';
+import StoreInfos from './StoreInfos'
 
 const DealCard = ({gameID, thumb, title, salePrice, dealID, savings, storeID, normalPrice}) => {
     const thumbnail = {backgroundImage: `url(${thumb})`}
@@ -13,7 +14,7 @@ const DealCard = ({gameID, thumb, title, salePrice, dealID, savings, storeID, no
             <div className="game-info-container">
                 <div className="game-info">
                     <p>{title}</p>
-                    <p>{storeID}</p>
+                    <StoreInfos storeID={storeID}/>
                 </div>
                     <div style={{display: "flex",justifyContent: "justify-content", flexDirection:"row"}}>
                         <div className="game-savings">
@@ -22,7 +23,7 @@ const DealCard = ({gameID, thumb, title, salePrice, dealID, savings, storeID, no
                             </p>
                         </div>
                         <div className="game-price" style={{flexDirection:"column"}}>
-                            <p>{normalPrice}</p>
+                            <p style={{ textDecorationLine: 'line-through' }}>{normalPrice} $</p>
                             <p>{salePrice} $</p>
                         </div>
                     </div>
