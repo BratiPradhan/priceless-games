@@ -13,12 +13,11 @@ function App() {
     <>
       <Navbar />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/search" component={GameList} />
-        <Route path="/game/:gameID" component={GameInfo} />
-        <Route path="/deals" component={Deals} />
+        <Route exact path="/" render={() => <Home />} />
+        <Route path="/search" render={({location}) => <GameList location={location} />} />
+        <Route path="/game/:gameID" render={({location}) => <GameInfo location={location} />} />
+        <Route path="/deals" render={() => <Deals />} />
+        <Route path="/new-games" render={() => <Deals />} />
       </Switch>
     </>
   )
