@@ -55,6 +55,9 @@
     font-size: 19px;
     margin: 0 0 20px;
 }
+.banner-text span{
+    text-decoration: underline;
+}
 .img-container{
     display: flex;
 }

@@ -12,7 +12,7 @@ const Home = () => {
                     <div className='banner-elem'>
                         <div className="banner-text">
                             <h1>Find your game at the best price</h1>
-                            <p>Search between 25+ game platform, including Steam and Origin.</p>
+                            <p>Search between 25+ game platform, including <span>Steam</span>, <span>Origin</span> and the <span>EpicGameStore</span> .</p>
                             <Search />
                         </div>
                     </div>
