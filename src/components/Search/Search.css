@@ -17,12 +17,14 @@ input {
 }
 .direct-search-desult{
   position: absolute;
+  width: 450px;
 }
 .direct-search-desult a {
   display: flex;
   text-decoration: none;
   color: #fff;
-  background-color: #01012b;
+  background-color: #202d39;
+  border-bottom: 1px solid gray;
   padding: 10px 20px;
   
 }
