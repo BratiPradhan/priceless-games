@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 // HERE CALL TO LOCAL STORAGE
 export const setStorage = (arr) => {
     const str = JSON.stringify(arr);
@@ -15,4 +17,8 @@ export const getStorage = () => {
 
 export const checkChanges = (arr) => {
      return arr
+}
+
+export const getGameInfos = (gameID) => {
+    return axios.get(`https://www.cheapshark.com/api/1.0/games?id=${gameID}`).then(res => res.data)
 }

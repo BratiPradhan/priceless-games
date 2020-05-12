@@ -7,7 +7,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Deals from './components/BestDeals/Deals'
 import FavList from './components/Favourite/FavList'
-import { setStorage, getStorage, checkChanges } from './utiles/index'
+import { setStorage, getStorage, checkChanges, getGameInfos } from './utiles/index'
 
 class App extends Component {
   constructor(props){
@@ -20,6 +20,7 @@ class App extends Component {
   componentDidMount = () => {
     const favGames = getStorage();
     this.setState({favGames})
+    getGameInfos(19)
   }
 
   componentDidUpdate = () => {
