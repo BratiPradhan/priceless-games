@@ -7,6 +7,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Deals from './components/BestDeals/Deals'
 import FavList from './components/Favourite/FavList'
+import { setStorage, getStorage } from './utiles/index'
 
 class App extends Component {
   constructor(props){
@@ -17,14 +18,14 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    const favGames = JSON.parse(localStorage.getItem('favGames'))
+    const favGames = getStorage();
     this.setState({favGames})
+
   }
 
   componentDidUpdate = () => {
-    const { favGames } = this.state
-    const str = JSON.stringify(favGames)
-    localStorage.setItem('favGames', str)
+    const { favGames } = this.state;
+    setStorage(favGames);
   }
 
   addFav = (id, title, price) => {
