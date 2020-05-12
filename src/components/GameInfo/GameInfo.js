@@ -14,6 +14,7 @@ class GameInfo extends Component {
             <div className="game-main"> 
                 <Image imgurl={thumb} title={title} />
                 <div className="game-main-deals">
+                    <button>Follow this game</button>
                     <RatingNotes dealID={dealID} />
                     <PriceList deals={deals} /> 
                 </div>
