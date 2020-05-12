@@ -7,7 +7,7 @@ const FavList = ({removeFav, favGames}) => {
     return(
         <div className='container'>
             <div className='fav-list'>
-                {favGames.map(game => <FavGame removeFav={removeFav}  {...game} />)}
+                {favGames.map(game => <FavGame key={game.id} removeFav={removeFav}  {...game} />)}
             </div>
         </div>
     )

@@ -5,5 +5,14 @@ export const setStorage = (arr) => {
 }
 
 export const getStorage = () => {
-    return JSON.parse(localStorage.getItem('favGames'))
+    const resp = JSON.parse(localStorage.getItem('favGames'))
+    if(resp === null){
+        return []
+    } else {
+        return resp
+    }
+}
+
+export const checkChanges = (arr) => {
+     return arr
 }
