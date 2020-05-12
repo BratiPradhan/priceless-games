@@ -1,0 +1,11 @@
+.fav-list{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fav-list div{
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid antiquewhite;
+}

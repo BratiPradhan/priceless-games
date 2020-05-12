@@ -1,5 +1,6 @@
 import React from 'react';
 import FavGame from './FavGame'
+import './FavList.css'
 
 const FavList = () => {
     
@@ -12,8 +13,10 @@ const FavList = () => {
     console.log(favArr);
     
     return(
-        <div className='fav-list'>
-            {favArr.map(game => <FavGame {...game} />)}
+        <div className='container'>
+            <div className='fav-list'>
+                {favArr.map(game => <FavGame {...game} />)}
+            </div>
         </div>
     )
 }
