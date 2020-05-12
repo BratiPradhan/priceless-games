@@ -10,8 +10,6 @@ const FavList = () => {
         favArr.push(game)
     }
 
-    console.log(favArr);
-    
     return(
         <div className='container'>
             <div className='fav-list'>
