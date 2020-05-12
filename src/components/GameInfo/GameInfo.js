@@ -8,13 +8,14 @@ class GameInfo extends Component {
    render() {
       const { deals, thumb } = this.props.location.state.game
       const { title } = this.props.location.state.game.info
+      const { addFav } = this.props
       const dealID = deals[0].dealID
     return(
         
             <div className="game-main"> 
                 <Image imgurl={thumb} title={title} />
                 <div className="game-main-deals">
-                    <button>Follow this game</button>
+                    <button onClick={() => addFav(title, dealID)}>Follow this game</button>
                     <RatingNotes dealID={dealID} />
                     <PriceList deals={deals} /> 
                 </div>

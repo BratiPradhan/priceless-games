@@ -12,21 +12,35 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      fav: []
     }
   }
 
+  componentDidMount(){
+    this.setState({fav: localStorage})
+  }
+
+  addFav = (title, dealID) => {
+    const game = {
+      title: title,
+      deal: dealID
+    }
+    localStorage.setItem(title, JSON.stringify(game))
+    this.setState({fav: localStorage})
+  }
+
   render(){
+    const { fav } = this.state
     return (
       <>
         <Navbar />
         <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route path="/search" render={({location}) => <GameList location={location} />} />
-          <Route path="/game/:gameID" render={({location}) => <GameInfo location={location} />} />
+          <Route path="/game/:gameID" render={({location}) => <GameInfo addFav={this.addFav} location={location} />} />
           <Route path="/deals" render={() => <Deals />} />
           <Route path="/new-games" render={() => <Deals />} />
-          <Route path='/favorite' render={() => <FavList />} />
+          <Route path='/favorite' render={() => <FavList fav={fav}/>} />
         </Switch>
       </>
     )
