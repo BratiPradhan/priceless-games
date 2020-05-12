@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-// HERE CALL TO LOCAL STORAGE
+// CALL TO LOCAL STORAGE
 export const setStorage = (arr) => {
     const str = JSON.stringify(arr);
     localStorage.setItem('favGames', str)
@@ -15,6 +15,7 @@ export const getStorage = () => {
     }
 }
 
+// CALL TO CHEAPSHARK API
 export const checkChanges = (arr) => {
      return arr
 }

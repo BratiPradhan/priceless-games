@@ -20,7 +20,6 @@ class App extends Component {
   componentDidMount = () => {
     const favGames = getStorage();
     this.setState({favGames})
-    getGameInfos(19)
   }
 
   componentDidUpdate = () => {
