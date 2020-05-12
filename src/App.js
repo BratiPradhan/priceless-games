@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Home from './components/Home'
 import {Switch, Route} from 'react-router-dom';
 import GameList from './components/GamesList'
@@ -8,9 +8,15 @@ import Navbar from './components/Navbar'
 import Deals from './components/BestDeals/Deals'
 import FavList from './components/Favourite/FavList'
 
-const App = () => {
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      fav: []
+    }
+  }
 
-  const addFav = (Id, title, dealID) => {
+  addFav = (Id, title, dealID) => {
     const game = {
       id: Id,
       title: title,
@@ -21,23 +27,26 @@ const App = () => {
 
   }
 
-  const removeFav = (Id) => {
+  removeFav = (Id) => {
     localStorage.removeItem(Id)
+
   }
 
+  render(){
     return (
       <>
         <Navbar />
         <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route path="/search" render={({location}) => <GameList location={location} />} />
-          <Route path="/game/:gameID" render={({location, match}) => <GameInfo addFav={addFav} location={location} match={match} />} />
+          <Route path="/game/:gameID" render={({location, match}) => <GameInfo addFav={this.addFav} location={location} match={match} />} />
           <Route path="/deals" render={() => <Deals />} />
           <Route path="/new-games" render={() => <Deals />} />
-          <Route path='/favorite' render={() => <FavList removeFav={removeFav} />} />
+          <Route path='/favorite' render={() => <FavList removeFav={this.removeFav} />} />
         </Switch>
       </>
     )
+  }
 }
 
 export default App;
