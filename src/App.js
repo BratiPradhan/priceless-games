@@ -12,27 +12,48 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      fav: []
+      favGames: []
     }
   }
 
-  addFav = (Id, title, dealID) => {
+  componentDidMount = () => {
+    const favGames = JSON.parse(localStorage.getItem('favGames'))
+    this.setState({favGames})
+  }
+
+  componentDidUpdate = () => {
+    const { favGames } = this.state
+    const str = JSON.stringify(favGames)
+    localStorage.setItem('favGames', str)
+  }
+
+  addFav = (id, title, price) => {
+    const { favGames } = this.state
     const game = {
-      id: Id,
+      id: id,
       title: title,
-      deal: dealID
+      price: price,
+      change: false
     }
 
-    localStorage.setItem(Id, JSON.stringify(game))
+    favGames.push(game);
+
+    this.setState({favGames})
 
   }
 
-  removeFav = (Id) => {
-    localStorage.removeItem(Id)
+  removeFav = (id) => {
+    let { favGames } = this.state;
+    const removed = favGames.filter(game => game.id === id);
+    const index = favGames.indexOf(removed[0]);
+    favGames.splice(index, 1);
+
+    this.setState({favGames})
 
   }
 
   render(){
+    const { favGames } = this.state
     return (
       <>
         <Navbar />
@@ -42,7 +63,7 @@ class App extends Component {
           <Route path="/game/:gameID" render={({location, match}) => <GameInfo addFav={this.addFav} location={location} match={match} />} />
           <Route path="/deals" render={() => <Deals />} />
           <Route path="/new-games" render={() => <Deals />} />
-          <Route path='/favorite' render={() => <FavList removeFav={this.removeFav} />} />
+          <Route path='/favorite' render={() => <FavList favGames={favGames} removeFav={this.removeFav} />} />
         </Switch>
       </>
     )
