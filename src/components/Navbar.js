@@ -10,7 +10,7 @@ const Navbar = () => {
                 <Link to="/deals">Bests deals</Link>
                 <Link to="/new-games">New Games</Link>
                 <div className='nav-alert'>
-                    <Link to='/'><FaBell /></Link>
+                    <Link to='/favorite'><FaBell /></Link>
                 </div>
             </nav>
         </header>
