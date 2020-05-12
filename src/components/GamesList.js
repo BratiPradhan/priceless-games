@@ -4,6 +4,7 @@ import GameCard from './GameCard';
 class GameList extends Component{
     render(){
         const games = this.props.location.state.games
+        
         return(
             <div className="game-list-rows">
                 {
