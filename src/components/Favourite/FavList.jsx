@@ -2,7 +2,7 @@ import React from 'react';
 import FavGame from './FavGame'
 import './FavList.css'
 
-const FavList = () => {
+const FavList = ({removeFav}) => {
     
     let favArr = [];
     for(let i = 0; i < localStorage.length; i++){
@@ -13,7 +13,7 @@ const FavList = () => {
     return(
         <div className='container'>
             <div className='fav-list'>
-                {favArr.map(game => <FavGame {...game} />)}
+                {favArr.map(game => <FavGame removeFav={removeFav}  {...game} />)}
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Home from './components/Home'
 import {Switch, Route} from 'react-router-dom';
 import GameList from './components/GamesList'
@@ -8,43 +8,36 @@ import Navbar from './components/Navbar'
 import Deals from './components/BestDeals/Deals'
 import FavList from './components/Favourite/FavList'
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      fav: []
-    }
-  }
+const App = () => {
 
-  componentDidMount(){
-    this.setState({fav: localStorage})
-  }
-
-  addFav = (title, dealID) => {
+  const addFav = (Id, title, dealID) => {
     const game = {
+      id: Id,
       title: title,
       deal: dealID
     }
-    localStorage.setItem(title, JSON.stringify(game))
-    this.setState({fav: localStorage})
+
+    localStorage.setItem(Id, JSON.stringify(game))
+
   }
 
-  render(){
-    const { fav } = this.state
+  const removeFav = (Id) => {
+    localStorage.removeItem(Id)
+  }
+
     return (
       <>
         <Navbar />
         <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route path="/search" render={({location}) => <GameList location={location} />} />
-          <Route path="/game/:gameID" render={({location}) => <GameInfo addFav={this.addFav} location={location} />} />
+          <Route path="/game/:gameID" render={({location, match}) => <GameInfo addFav={addFav} location={location} match={match} />} />
           <Route path="/deals" render={() => <Deals />} />
           <Route path="/new-games" render={() => <Deals />} />
-          <Route path='/favorite' render={() => <FavList fav={fav}/>} />
+          <Route path='/favorite' render={() => <FavList removeFav={removeFav} />} />
         </Switch>
       </>
     )
-  }
 }
 
 export default App;

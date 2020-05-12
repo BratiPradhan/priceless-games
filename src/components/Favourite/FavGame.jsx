@@ -1,10 +1,11 @@
 import React from 'react';
 
-const FavGame = ({title, deal}) => {
+const FavGame = ({id, title, deal, removeFav}) => {
     return (
         <div>
             <h3>{title}</h3>
             <p>{deal}</p>
+            <button onClick={() => removeFav(id)}>remove</button>
         </div>
     )
 }

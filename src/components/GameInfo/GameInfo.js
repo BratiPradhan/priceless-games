@@ -10,12 +10,14 @@ class GameInfo extends Component {
       const { title } = this.props.location.state.game.info
       const { addFav } = this.props
       const dealID = deals[0].dealID
+      const { gameID } = this.props.match.params
+      
     return(
         
             <div className="game-main"> 
                 <Image imgurl={thumb} title={title} />
                 <div className="game-main-deals">
-                    <button onClick={() => addFav(title, dealID)}>Follow this game</button>
+                    <button onClick={() => addFav(gameID, title, dealID)}>Follow this game</button>
                     <RatingNotes dealID={dealID} />
                     <PriceList deals={deals} /> 
                 </div>
