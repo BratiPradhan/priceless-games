@@ -17,8 +17,8 @@ class GameInfo extends Component {
         
             <div className="game-main"> 
                 <Image imgurl={thumb} title={title} />
+                <button className='fav-btn' onClick={() => addFav(gameID, title, price)}>Follow this game</button>
                 <div className="game-main-deals">
-                    <button className='fav-btn' onClick={() => addFav(gameID, title, price)}>Follow this game</button>
                     <RatingNotes dealID={dealID} />
                     <PriceList deals={deals} /> 
                 </div>

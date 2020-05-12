@@ -35,7 +35,7 @@ class App extends Component {
       price: price,
       change: false
     }
-
+ 
     favGames.push(game);
 
     this.setState({favGames})
