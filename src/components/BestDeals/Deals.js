@@ -57,7 +57,7 @@ class Deals extends Component {
                     {isLoading
                         ? <LoaderSpin />
                         : deals.map((deal, i) => <DealCard key={i} {...deal} />)
-                        }
+                    }
                 </div>
             </div> 
         )
