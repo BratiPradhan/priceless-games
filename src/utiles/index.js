@@ -20,6 +20,20 @@ export const getGameInfos = (gameID) => {
     return axios.get(`https://www.cheapshark.com/api/1.0/games?id=${gameID}`).then(res => res.data)
 }
 
-export const checkChanges = (arr) => {
-     return arr
+export const checkChanges = async (arr) => {
+
+    return await Promise.all(arr.map( async game => {
+        const gameData = await getGameInfos(game.id)
+        const { price } = gameData.deals[0]
+        if(game.price !== price){
+            return {
+                ...game,
+                change: true
+            }
+        } else {
+            return game
+        }
+    }))
+
+    
 }

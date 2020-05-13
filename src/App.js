@@ -17,9 +17,10 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
     const favGames = getStorage();
-    this.setState({favGames})
+    const checkedList = await checkChanges(favGames)
+    this.setState({favGames: checkedList})
   }
 
   componentDidUpdate = () => {
