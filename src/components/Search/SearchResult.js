@@ -37,12 +37,13 @@ class SearchResult extends Component {
     render(){
         const { game } = this.state;
         const { gameID } = this.props
+        const thumbnail = {backgroundImage: `url(${this.state.game.thumb})`}
         return(
             <Link to={{
                 pathname: `/game/${gameID}`,
                 state: { game: game }
             }}>
-                <img alt={game.info.title} src={this.props.thumb}/>
+                <span className='card-thumb' style={thumbnail}></span>
                 <div>
                     <h3>{game.info.title}</h3>
                     <p>{game.deals[0].price} $</p>

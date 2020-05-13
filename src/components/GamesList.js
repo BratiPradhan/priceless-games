@@ -25,10 +25,10 @@ class GameList extends Component{
     }
     render(){
         return(
-           <div className='container'>
-               <Search />
-                <div className="game-list-rows">
-                    <SortedPrice handleSorted={this.handleSorted} />
+           <div className='container result-container'>
+               <h2>Your search result</h2>
+                <SortedPrice handleSorted={this.handleSorted} />
+                <div className="game-list-rows">        
                     {
                     this.state.games.map(game => 
                         <GameCard
