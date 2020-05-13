@@ -23,7 +23,7 @@ const DealCard = ({gameID, thumb, title, salePrice, dealID, savings, storeID, no
                             </p>
                         </div>
                         <div className="game-price">
-                            <p>{salePrice} $</p>
+                            <p>{salePrice > 0 ? salePrice + ' $' : 'free'}</p>
                             <p>{normalPrice} $</p>
                         </div>
                     </div>
