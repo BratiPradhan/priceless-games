@@ -46,7 +46,7 @@ class Search extends Component{
   handleBlur = () => {
     setTimeout(() => {
       this.setState({isFocus: false})
-    }, 200)
+    }, 150)
   }
   
   render(){
