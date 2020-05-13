@@ -64,7 +64,6 @@ class App extends Component {
           <Route path="/search" render={({location}) => <GameList location={location} />} />
           <Route path="/game/:gameID" render={({location, match}) => <GameInfo addFav={this.addFav} location={location} match={match} />} />
           <Route path="/deals" render={() => <Deals />} />
-          <Route path="/new-games" render={() => <Deals />} />
           <Route path='/favorite' render={() => <FavList favGames={favGames} removeFav={this.removeFav} />} />
         </Switch>
       </>
