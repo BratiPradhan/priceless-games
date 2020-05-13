@@ -28,6 +28,7 @@ export const checkChanges = async (arr) => {
         if(game.price !== price){
             return {
                 ...game,
+                newPrice: price,
                 change: true
             }
         } else {
@@ -35,5 +36,4 @@ export const checkChanges = async (arr) => {
         }
     }))
 
-    
 }
