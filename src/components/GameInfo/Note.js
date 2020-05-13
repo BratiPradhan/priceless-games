@@ -11,22 +11,16 @@ class Note extends React.Component {
     constructor(props){
         super(props);
         this.state= {
-            note: 0,
-            link: ''
+            infos: {}
         };
     }
     
     getGame=(id)=>{ 
         axios.get(`https://www.cheapshark.com/api/1.0/deals?id=${id}`)
-        .then( response => {
-            return response.data
-        })
+        .then( res => res.data)
         .then(data => {
-            const { metacriticScore, metacriticLink } = data.gameInfo;
-            this.setState({
-                note: metacriticScore,
-                link: metacriticLink
-            })
+            const infos = data.gameInfo;
+            this.setState({infos})
         }) 
         .catch( error => {
             console.log(error);
@@ -40,14 +34,15 @@ class Note extends React.Component {
     }
 
     render(){
-        const { note, link } = this.state
+        const { infos } = this.state
+        const score = parseInt(infos.metacriticScore)
         return(
-           <a href={`https://www.metacritic.com${link}`} 
+           <a href={`https://www.metacritic.com${infos.metacriticLink}`} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="note">
                 <p className="note-title">Game score</p>
-                <h2 style={noteValue}>{note} %</h2> 
+                <h2 style={noteValue}>{score > 0 ? score : infos.steamRatingPercent} %</h2> 
                 <p>Get more info</p>  
           </a>
         );

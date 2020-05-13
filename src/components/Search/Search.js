@@ -34,9 +34,14 @@ class Search extends Component{
   }
 
   handleChange = (e) => {
-    const input = e.target;
-    this.setState({value : input.value})
-    this.getGames(input.value)
+    const {value} = e.target;
+    this.setState({value})
+    if(value.length > 0){
+      this.setState({isFocus: true})
+      this.getGames(value)
+    } else {
+      this.setState({isFocus: false})
+    }
   }
 
   handleFocus = () => {
@@ -46,7 +51,7 @@ class Search extends Component{
   handleBlur = () => {
     setTimeout(() => {
       this.setState({isFocus: false})
-    }, 100)
+    }, 150)
   }
   
   render(){
