@@ -1,13 +1,14 @@
 import React from 'react';
 
-const SortedPrice = (props) => {
+
+const SortedPrice = ({handleSorted} ) => {
     return(
         <div>
-             <select id="cars">
+             <select onChange={handleSorted}>
+                    <option value="relevance">Pertinent</option>
                     <option value="cheapest">Price</option>
-                    <option value="">Pertinent</option>
+                 
                 </select>  
-
         </div>
     )
 }
