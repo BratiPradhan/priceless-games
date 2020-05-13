@@ -3,7 +3,7 @@ import FavGame from './FavGame'
 import './FavList.css'
 import logo from '../../imgs/logo-fav.svg'
 
-const FavList = ({removeFav, favGames}) => {
+const FavList = ({removeNotif, removeFav, favGames}) => {
     
     return(
         <>
@@ -22,7 +22,7 @@ const FavList = ({removeFav, favGames}) => {
             </section>
             <div className='container'>
                 <div className='fav-list'>
-                    {favGames.map(game => <FavGame key={game.id} removeFav={removeFav}  {...game} />)}
+                    {favGames.map(game => <FavGame key={game.id} removeFav={removeFav} removeNotif={removeNotif}  {...game} />)}
                 </div>
             </div>
          </>

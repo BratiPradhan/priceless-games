@@ -36,10 +36,11 @@ class App extends Component {
 
   addFav = (id, title, price) => {
     const { favGames } = this.state
+    const demoPrice = price + 1 // ONLY HERE FOR DEMO PURPOSE -> CHECK NOTIFICATION SYSTEM
     const game = {
       id: id,
       title: title,
-      price: price,
+      price: price, // DEMO PURPOSE : CHANGE THIS BY demoPrice
       newPrice: null,
       change: false
     }
@@ -63,6 +64,21 @@ class App extends Component {
 
   }
 
+  removeNotif = (id) => {
+    const { favGames } = this.state;
+    const changed = favGames.map(game => {
+      if(game.id === id){
+        return {
+          ...game,
+          change: false
+        }
+      } else {
+        return game
+      }
+    })
+    this.setState({favGames: changed})
+  }
+
   render(){
     const { favGames } = this.state
     return (
@@ -74,7 +90,7 @@ class App extends Component {
           <Route path="/search" render={({location}) => <GameList location={location} />} />
           <Route path="/game/:gameID" render={({location, match}) => <GameInfo addFav={this.addFav} location={location} match={match} />} />
           <Route path="/deals" render={() => <Deals />} />
-          <Route path='/favorite' render={() => <FavList favGames={favGames} removeFav={this.removeFav} />} />
+          <Route path='/favorite' render={() => <FavList favGames={favGames} removeFav={this.removeFav} removeNotif={this.removeNotif} />} />
         </Switch>
       </>
     )
