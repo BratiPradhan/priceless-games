@@ -66,7 +66,7 @@
     margin: auto;
 }
 .game-list-rows{
-    margin: 50px;
+    margin-top: 10px;
 }
 
 /* Main content section */
@@ -151,4 +151,13 @@ footer{
 }
 footer a{
     color: #F76C6C;
+}
+
+/* RESULT */
+.result-container h2{
+    text-align: center;
+    color: #2daae1;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 30px 0 40px;
 }
