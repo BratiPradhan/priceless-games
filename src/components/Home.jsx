@@ -26,8 +26,8 @@ const Home = () => {
                     <div className="main-content-section">
                         <div className="col-txt">
                             <div className='main-text'>
-                                <h2>Games are too expensive, right ?</h2>
-                                <p> With priceless games, this is no longer a problem!</p>
+                                <h2>Save up to 98% on your games !</h2>
+                                <p> With priceless games, expensive pricing is no longer a problem!</p>
                                 <br />
                                 <p> Find the best price for your favourite game between 25+ different sales platforms</p>
                             </div>

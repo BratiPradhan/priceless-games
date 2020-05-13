@@ -54,6 +54,7 @@ class GameCard extends Component {
                     <div className="game-info">
                         <p>{game.info.title}</p>
                     </div>
+
                         <div className="game-price-card">
                             <div className="game-savings">
                                 <p>-{Math.round(savings)}%</p>
@@ -63,6 +64,7 @@ class GameCard extends Component {
                                 <p>{price} $</p>
                             </div>
                     </div>
+
                 </div>
             </Link>
         )

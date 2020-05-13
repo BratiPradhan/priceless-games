@@ -8,9 +8,8 @@ const Navbar = () => {
             <nav className="main-nav container">
                 <Link to="/">Search</Link>
                 <Link to="/deals">Bests deals</Link>
-                <Link to="/new-games">New Games</Link>
                 <div className='nav-alert'>
-                    <Link to='/'><FaBell /></Link>
+                    <Link to='/favorite'>wishlist <FaBell /></Link>
                 </div>
             </nav>
         </header>
