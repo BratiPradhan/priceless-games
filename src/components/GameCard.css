@@ -32,3 +32,10 @@
 .game-info{
     margin-left: 10px;
 }
+.game-price p{
+    color: #a4d007;
+    background: #4c6b22;
+    padding: 0 4px;
+    margin-top: 8px;
+    border-radius: 5px
+}
