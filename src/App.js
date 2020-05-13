@@ -7,7 +7,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Deals from './components/BestDeals/Deals'
 import FavList from './components/Favourite/FavList'
-import { setStorage, getStorage, checkChanges } from './utils/index'
+import { setStorage, getStorage, checkChanges } from './utils/storage'
 import ReactNotification from 'react-notifications-component'
 import 'react-notifications-component/dist/theme.css'
 import { store } from 'react-notifications-component';
