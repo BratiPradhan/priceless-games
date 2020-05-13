@@ -39,7 +39,7 @@ class GameCard extends Component {
 
     render(){
         const { game } = this.state;
-        const { savings, price } = game.deals[0]
+        const { savings, price, storeID } = game.deals[0]
         const { gameID } = this.props
         const thumb = {backgroundImage: `url(${this.props.thumb})`}
         return(
@@ -53,6 +53,7 @@ class GameCard extends Component {
                 <div className="game-info-container">
                     <div className="game-info">
                         <p>{game.info.title}</p>
+                        <p>{storeID}</p>
                     </div>
                     <div className="game-price">
                         <p>-{Math.round(savings)}%</p>
