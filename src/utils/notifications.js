@@ -43,7 +43,8 @@ export const changeNotif = (title) => {
         animationOut: ["animated", "fadeOut"],
         dismiss: {
           duration: 5000,
-          onScreen: false
+          onScreen: false,
+          showIcon: true
         }
       });
 }
