@@ -7,7 +7,7 @@ const FavGame = ({id, title, price, removeFav}) => {
                 <h3>{title}</h3>
                 <p>{price}</p>
             </div>
-            <button className='fav-btn' onClick={() => removeFav(id)}>remove</button>
+            <button className='fav-btn' onClick={() => removeFav(id, title)}>remove</button>
         </div>
     )
 }

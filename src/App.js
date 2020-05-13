@@ -10,7 +10,7 @@ import FavList from './components/Favourite/FavList'
 import { setStorage, getStorage, checkChanges } from './utils/storage'
 import ReactNotification from 'react-notifications-component'
 import 'react-notifications-component/dist/theme.css'
-import { store } from 'react-notifications-component';
+import { addNotif, removedNotif } from './utils/notifications'
 
 
 
@@ -44,26 +44,14 @@ class App extends Component {
       change: false
     }
  
-    store.addNotification({
-      title: `${title} is add to your favorite list`,
-      message: " ",
-      type: "info",
-      insert: "top",
-      container: "bottom-right",
-      animationIn: ["animated", "fadeIn"],
-      animationOut: ["animated", "fadeOut"],
-      dismiss: {
-        duration: 5000,
-        onScreen: false
-      }
-    });
+    addNotif(title);
 
     favGames.push(game);
     this.setState({favGames})
 
   }
 
-  removeFav = (id) => {
+  removeFav = (id, title) => {
     let { favGames } = this.state;
     const removed = favGames.filter(game => game.id === id);
     const index = favGames.indexOf(removed[0]);
@@ -71,19 +59,7 @@ class App extends Component {
 
     this.setState({favGames})
 
-    store.addNotification({
-      title: `Item removed`,
-      message: " ",
-      type: "warning",
-      insert: "top",
-      container: "bottom-right",
-      animationIn: ["animated", "fadeIn"],
-      animationOut: ["animated", "fadeOut"],
-      dismiss: {
-        duration: 5000,
-        onScreen: false
-      }
-    });
+    removedNotif(title)
 
   }
 
