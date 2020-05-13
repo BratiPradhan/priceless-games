@@ -7,7 +7,13 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Deals from './components/BestDeals/Deals'
 import FavList from './components/Favourite/FavList'
-import { setStorage, getStorage, checkChanges } from './utiles/index'
+import { setStorage, getStorage, checkChanges } from './utils/index'
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
+import { store } from 'react-notifications-component';
+
+
+
 
 class App extends Component {
   constructor(props){
@@ -38,8 +44,21 @@ class App extends Component {
       change: false
     }
  
-    favGames.push(game);
+    store.addNotification({
+      title: `${title} is add to your favorite list`,
+      message: " ",
+      type: "info",
+      insert: "top",
+      container: "bottom-right",
+      animationIn: ["animated", "fadeIn"],
+      animationOut: ["animated", "fadeOut"],
+      dismiss: {
+        duration: 5000,
+        onScreen: false
+      }
+    });
 
+    favGames.push(game);
     this.setState({favGames})
 
   }
@@ -52,12 +71,27 @@ class App extends Component {
 
     this.setState({favGames})
 
+    store.addNotification({
+      title: `Item removed`,
+      message: " ",
+      type: "warning",
+      insert: "top",
+      container: "bottom-right",
+      animationIn: ["animated", "fadeIn"],
+      animationOut: ["animated", "fadeOut"],
+      dismiss: {
+        duration: 5000,
+        onScreen: false
+      }
+    });
+
   }
 
   render(){
     const { favGames } = this.state
     return (
       <>
+        <ReactNotification />
         <Navbar />
         <Switch>
           <Route exact path="/" render={() => <Home />} />
