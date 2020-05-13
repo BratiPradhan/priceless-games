@@ -37,6 +37,7 @@ class Search extends Component{
     const {value} = e.target;
     this.setState({value})
     if(value.length > 0){
+      this.setState({isFocus: true})
       this.getGames(value)
     } else {
       this.setState({isFocus: false})
