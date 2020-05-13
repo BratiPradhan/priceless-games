@@ -32,3 +32,9 @@
 .game-info{
     margin-left: 10px;
 }
+.game-price-card{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    text-align: center;
+}

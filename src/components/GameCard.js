@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { withRouter } from 'react-router-dom';
 import './GameCard.css'
 import axios from 'axios';
+import StoreInfos from './BestDeals/StoreInfos'
 
 
 class GameCard extends Component {
@@ -38,6 +39,7 @@ class GameCard extends Component {
 
     render(){
         const { game } = this.state;
+        const { savings, price } = game.deals[0]
         const { gameID } = this.props
         const thumb = {backgroundImage: `url(${this.props.thumb})`}
         return(
@@ -52,9 +54,17 @@ class GameCard extends Component {
                     <div className="game-info">
                         <p>{game.info.title}</p>
                     </div>
-                    <div className="game-price">
-                        <p>{game.deals[0].price} $</p>
-                    </div> 
+
+                        <div className="game-price-card">
+                            <div className="game-savings">
+                                <p>-{Math.round(savings)}%</p>
+                            </div>
+                            <div>
+                                <p>Best deal</p>
+                                <p>{price} $</p>
+                            </div>
+                    </div>
+
                 </div>
             </Link>
         )
