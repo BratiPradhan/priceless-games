@@ -70,13 +70,16 @@ class App extends Component {
       if(game.id === id){
         return {
           ...game,
-          change: false
+          change: false,
+          newPrice: null
         }
       } else {
         return game
       }
     })
+
     this.setState({favGames: changed})
+
   }
 
   render(){
