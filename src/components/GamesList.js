@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import GameCard from './GameCard';
 import SortedPrice from './SortedPrice';
+import Search from './Search/Search'
 
 class GameList extends Component{
     state = {
@@ -24,16 +25,18 @@ class GameList extends Component{
     }
     render(){
         return(
-           
-            <div className="game-list-rows">
-                <SortedPrice handleSorted={this.handleSorted} />
-                {
-                this.state.games.map(game => 
-                    <GameCard
-                        key={game.gameID}
-                        {...game}
-                    />)  
-                }     
+           <div className='container'>
+               <Search />
+                <div className="game-list-rows">
+                    <SortedPrice handleSorted={this.handleSorted} />
+                    {
+                    this.state.games.map(game => 
+                        <GameCard
+                            key={game.gameID}
+                            {...game}
+                        />)  
+                    }     
+                </div>
             </div>
         )
     }

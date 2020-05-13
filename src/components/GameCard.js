@@ -57,7 +57,7 @@ class GameCard extends Component {
 
                         <div className="game-price-card">
                             <div className="game-savings">
-                                <p>-{Math.round(savings)}%</p>
+                                {savings > 0 ? <p>-{Math.round(savings)}%</p> : ""}
                             </div>
                             <div>
                                 <p>Best deal</p>

@@ -12,7 +12,7 @@ const FavList = ({removeFav, favGames}) => {
                     <div className='banner-elem'>
                         <div className="banner-text">
                             <h1>Follow your favourite games</h1>
-                            <p>Be notified when the price of one of your favourite game drop !</p>
+                            <p>Follow a game and be notified when the price of one of your favourite game drop !</p>
                         </div>
                     </div>
                     <div className="banner-elem img-container">

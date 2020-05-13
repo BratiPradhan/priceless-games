@@ -18,13 +18,11 @@ const DealCard = ({gameID, thumb, title, salePrice, dealID, savings, storeID, no
                 </div>
                     <div style={{display: "flex",justifyContent: "justify-content", flexDirection:"row"}}>
                         <div className="game-savings">
-                            <p>
-                                -{Math.round(savings)}%
-                            </p>
+                            {savings > 0 && <p>-{Math.round(savings)}%</p>}
                         </div>
                         <div className="game-price">
                             <p>{salePrice > 0 ? salePrice + ' $' : 'free'}</p>
-                            <p>{normalPrice} $</p>
+                            {savings > 0 && <p>{normalPrice} $</p>}
                         </div>
                     </div>
             </div>
