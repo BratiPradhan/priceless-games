@@ -7,7 +7,7 @@ const DealCard = ({gameID, thumb, title, salePrice, dealID, savings, storeID, no
     const thumbnail = {backgroundImage: `url(${thumb})`}
     return(
         <a 
-            className="game-card" 
+            className="deal-card" 
             href={`https://www.cheapshark.com/redirect?dealID=${dealID}`}
             target='_blank'>
             <span className='card-thumb' style={thumbnail}></span>

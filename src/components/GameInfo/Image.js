@@ -11,7 +11,6 @@ const Image = ({imgurl, title, price, gameID, addFav}) =>{
                             <div className='banner-elem'>
                                 <div className="banner-text">
                                     <h1>{title}</h1>
-                                    <button className='fav-btn' onClick={() => addFav(gameID, title, price)}>Follow this game</button>
                                 </div>
                             </div>
                             <div className="banner-elem img-container">

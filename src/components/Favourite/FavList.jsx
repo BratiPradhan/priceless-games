@@ -15,16 +15,17 @@ const FavList = ({removeNotif, removeFav, favGames}) => {
                             <p>Follow a game and be notified when the price of one of your favourite game drop !</p>
                         </div>
                     </div>
-                    <div className="banner-elem img-container">
-                        <img className='banner-img' src={logo} />
+                    <div className="banner-elem ">
+                        {
+                        favGames.length > 0  
+                            ? <div className='fav-list'>
+                                {favGames.map(game => <FavGame key={game.id} removeFav={removeFav} removeNotif={removeNotif}  {...game} />)}
+                              </div>
+                            : <div className='img-container'><img className='banner-img' src={logo} /></div>
+                        } 
                     </div>
                 </div>
             </section>
-            <div className='container'>
-                <div className='fav-list'>
-                    {favGames.map(game => <FavGame key={game.id} removeFav={removeFav} removeNotif={removeNotif}  {...game} />)}
-                </div>
-            </div>
          </>
     )
 }

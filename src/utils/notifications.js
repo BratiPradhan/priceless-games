@@ -32,18 +32,19 @@ export const removedNotif = (title) => {
       });
 }
 
-export const changeNotif = () => {
+export const changeNotif = (title) => {
     store.addNotification({
-        title: `is removed`,
-        message: " ",
-        type: "warning",
+        title: `${title} price just drop !`,
+        message: "Check your wishlist to see more",
+        type: "success",
         insert: "top",
         container: "bottom-right",
         animationIn: ["animated", "fadeIn"],
         animationOut: ["animated", "fadeOut"],
         dismiss: {
           duration: 5000,
-          onScreen: false
+          onScreen: false,
+          showIcon: true
         }
       });
 }
