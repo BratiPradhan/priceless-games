@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 const FavGame = ({id, title, price, game, newPrice, change, removeFav, removeNotif}) => {
 
     const thumb = game.thumb
-    console.log(thumb)
+    const saving = Math.round( 100 - (100*(parseFloat(newPrice)/parseFloat(price))))
+
      return (
         <Link 
             className="fav-card" 
@@ -20,6 +21,7 @@ const FavGame = ({id, title, price, game, newPrice, change, removeFav, removeNot
 
                 <div className="game-price-card">
                     <div className="game-savings">
+                        {saving < 0 && <p>{saving} %</p>}
                     </div>
                     <div className='fav-prices'>
                         <p>{price} $</p>
