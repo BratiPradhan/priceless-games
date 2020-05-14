@@ -37,11 +37,11 @@ class App extends Component {
 
   addFav = (id, title, price, game) => {
     const { favGames } = this.state
-    const demoPrice = parseFloat(price) - 10 // ONLY HERE FOR DEMO PURPOSE -> CHECK NOTIFICATION SYSTEM
+    const demoPrice = parseFloat(price) + 10 // ONLY HERE FOR DEMO PURPOSE -> CHECK NOTIFICATION SYSTEM
     const gameInfos = {
       id: id,
       title: title,
-      price: demoPrice, // DEMO PURPOSE : CHANGE THIS BY demoPrice
+      price: price, // DEMO PURPOSE : CHANGE THIS BY demoPrice
       newPrice: null,
       change: false,
       game: game

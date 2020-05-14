@@ -16,6 +16,7 @@
     justify-content: space-between;
     width: 70%;
     padding-left: 10px;
+    padding-right: 10px;
 }
 .game-card:hover {
     background: rgba( 0, 0, 0, 0.4 );

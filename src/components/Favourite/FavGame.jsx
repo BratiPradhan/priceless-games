@@ -7,6 +7,7 @@ const FavGame = ({id, title, price, game, newPrice, change, removeFav, removeNot
     const saving = Math.round( 100 - (100*(parseFloat(newPrice)/parseFloat(price))))
 
      return (
+         <div className='fav-row'>
         <Link 
             className="fav-card" 
             to={{
@@ -18,19 +19,21 @@ const FavGame = ({id, title, price, game, newPrice, change, removeFav, removeNot
                 <div className="game-info">
                     <p>{title}</p>
                 </div>
-
                 <div className="game-price-card">
                     <div className="game-savings">
-                        {saving < 0 && <p>{saving} %</p>}
+                        {saving > 0 && <p>-{saving} %</p>}
                     </div>
                     <div className='fav-prices'>
-                        <p>{price} $</p>
-                        <p>{newPrice}</p>
+                        {newPrice !== null && <p>{newPrice + ' $'}</p>}
+                        <p>{Math.round(price * 100)/100} $</p>
                     </div>
                 </div>
-
             </div>
         </Link>
+        <div className='remove-btn' onClick={() => removeFav(id, title)}>
+            X
+        </div>
+        </div>
     )
 }
 
