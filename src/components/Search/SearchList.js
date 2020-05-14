@@ -2,17 +2,18 @@ import React from 'react';
 import SearchResult from './SearchResult';
 import Search from './Search'
 
-const SearchList = (props) => {
+const SearchList = ({games}) => {
     return(
 
             <div className="direct-search-desult">
-                {
-                props.games.map(game => 
+                {games.length > 0 
+                ? games.map(game => 
                     <SearchResult
                         key={game.gameID}
                         {...game}
                     />
                     )
+                : <div className='no-result'>No result</div>
                 }
             </div>
 

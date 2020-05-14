@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { withRouter } from 'react-router-dom';
 import './GameCard.css'
 import axios from 'axios';
-import StoreInfos from './BestDeals/StoreInfos'
+import {MdAddAlert} from 'react-icons/md'
 
 
 class GameCard extends Component {
@@ -40,33 +40,38 @@ class GameCard extends Component {
     render(){
         const { game } = this.state;
         const { savings, price } = game.deals[0]
-        const { gameID } = this.props
+        const { gameID, addFav } = this.props
         const thumb = {backgroundImage: `url(${this.props.thumb})`}
         return(
-            <Link 
-                className="game-card" 
-                to={{
-                    pathname: `/game/${gameID}`,
-                    state: { game: game }
-                }}>
-                <span className='card-thumb' style={thumb}></span>
-                <div className="game-info-container">
-                    <div className="game-info">
-                        <p>{game.info.title}</p>
-                    </div>
+            <div className='gamecard-row'>
+                <Link 
+                    className="game-card" 
+                    to={{
+                        pathname: `/game/${gameID}`,
+                        state: { game: game }
+                    }}>
+                    <span className='card-thumb' style={thumb}></span>
+                    <div className="game-info-container">
+                        <div className="game-info">
+                            <p>{game.info.title}</p>
+                        </div>
 
-                        <div className="game-price-card">
-                            <div className="game-savings">
-                                {savings > 0 ? <p>-{Math.round(savings)}%</p> : ""}
-                            </div>
-                            <div>
-                                <p>Best deal</p>
-                                <p>{price} $</p>
-                            </div>
-                    </div>
+                            <div className="game-price-card">
+                                <div className="game-savings">
+                                    {savings > 0 ? <p>-{Math.round(savings)}%</p> : ""}
+                                </div>
+                                <div>
+                                    <p>Best deal</p>
+                                    <p>{price} $</p>
+                                </div>
+                        </div>
 
+                    </div>
+                </Link>
+                <div className='add-btn' onClick={() => addFav(gameID, game.info.title, price, game)}>
+                    <MdAddAlert />
                 </div>
-            </Link>
+            </div>
         )
     }
 }

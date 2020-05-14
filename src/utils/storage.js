@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { changeNotif } from './notifications'
 
 // CALL TO LOCAL STORAGE
 export const setStorage = (arr) => {
@@ -26,6 +27,7 @@ export const checkChanges = async (arr) => {
         const gameData = await getGameInfos(game.id)
         const { price } = gameData.deals[0]
         if(game.price !== price){
+            changeNotif(game.title);
             return {
                 ...game,
                 newPrice: price,

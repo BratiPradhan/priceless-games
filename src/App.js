@@ -19,14 +19,21 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      favGames: []
+      favGames: [],
+      asChange: false
     }
   }
 
   componentDidMount = async () => {
     const storedFavGames = getStorage();
     const checkedList = await checkChanges(storedFavGames)
-    this.setState({favGames: checkedList})
+    const asChange = checkedList.some(game => game.change === true )
+
+    this.setState({
+      favGames: checkedList,
+      asChange
+    })
+
   }
 
   componentDidUpdate = () => {
@@ -34,20 +41,21 @@ class App extends Component {
     setStorage(favGames);
   }
 
-  addFav = (id, title, price) => {
+  addFav = (id, title, price, game) => {
     const { favGames } = this.state
-    const demoPrice = price + 1 // ONLY HERE FOR DEMO PURPOSE -> CHECK NOTIFICATION SYSTEM
-    const game = {
+    const demoPrice = parseFloat(price) + 10 // ONLY HERE FOR DEMO PURPOSE -> CHECK NOTIFICATION SYSTEM
+    const gameInfos = {
       id: id,
       title: title,
-      price: price, // DEMO PURPOSE : CHANGE THIS BY demoPrice
+      price: demoPrice, // DEMO PURPOSE : CHANGE THIS BY demoPrice
       newPrice: null,
-      change: false
+      change: false,
+      game: game
     }
  
     addNotif(title);
 
-    favGames.push(game);
+    favGames.push(gameInfos);
     this.setState({favGames})
 
   }
@@ -67,30 +75,34 @@ class App extends Component {
   removeNotif = (id) => {
     const { favGames } = this.state;
     const changed = favGames.map(game => {
-      if(game.id === id){
-        return {
-          ...game,
-          change: false,
-          newPrice: null
-        }
+      if(game.id === id && game.newPrice !== null){
+          return {
+            ...game,
+            change: false,
+            price: game.newPrice,
+            newPrice: null
+          } 
       } else {
         return game
       }
     })
 
-    this.setState({favGames: changed})
+    this.setState({
+      favGames: changed,
+      asChange: false
+    })
 
   }
 
   render(){
-    const { favGames } = this.state
+    const { favGames, asChange } = this.state
     return (
       <>
         <ReactNotification />
-        <Navbar />
+        <Navbar asChange={asChange}/>
         <Switch>
           <Route exact path="/" render={() => <Home />} />
-          <Route path="/search" render={({location}) => <GameList location={location} />} />
+          <Route path="/search" render={({location}) => <GameList addFav={this.addFav} location={location} />} />
           <Route path="/game/:gameID" render={({location, match}) => <GameInfo addFav={this.addFav} location={location} match={match} />} />
           <Route path="/deals" render={() => <Deals />} />
           <Route path='/favorite' render={() => <FavList favGames={favGames} removeFav={this.removeFav} removeNotif={this.removeNotif} />} />

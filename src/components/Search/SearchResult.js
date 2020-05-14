@@ -44,7 +44,7 @@ class SearchResult extends Component {
                 state: { game: game }
             }}>
                 <span className='card-thumb' style={thumbnail}></span>
-                <div>
+                <div className='result-card-info'>
                     <h3>{game.info.title}</h3>
                     <p>{game.deals[0].price} $</p>
                 </div>
