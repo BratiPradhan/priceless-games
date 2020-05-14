@@ -82,3 +82,14 @@
     cursor: pointer;
     background-color: rgba(212, 33, 33, 0.76);
 }
+
+.seen-btn{
+    background-color: #13171e;
+    text-align: center;
+    padding-top: 25px;
+    width: 40px;
+}
+.seen-btn:hover{
+    cursor: pointer;
+    background-color: rgba(218, 147, 17, 0.87);
+}

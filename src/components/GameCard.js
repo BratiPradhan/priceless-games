@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { withRouter } from 'react-router-dom';
 import './GameCard.css'
 import axios from 'axios';
-import StoreInfos from './BestDeals/StoreInfos'
+import {MdAddAlert} from 'react-icons/md'
 
 
 class GameCard extends Component {
@@ -69,7 +69,7 @@ class GameCard extends Component {
                     </div>
                 </Link>
                 <div className='add-btn' onClick={() => addFav(gameID, game.info.title, price, game)}>
-                    +
+                    <MdAddAlert />
                 </div>
             </div>
         )
