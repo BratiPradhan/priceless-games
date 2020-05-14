@@ -27,6 +27,7 @@ class App extends Component {
     const storedFavGames = getStorage();
     const checkedList = await checkChanges(storedFavGames)
     this.setState({favGames: checkedList})
+    console.log(this.state.favGames)
   }
 
   componentDidUpdate = () => {
@@ -34,20 +35,21 @@ class App extends Component {
     setStorage(favGames);
   }
 
-  addFav = (id, title, price) => {
+  addFav = (id, title, price, game) => {
     const { favGames } = this.state
     const demoPrice = price + 1 // ONLY HERE FOR DEMO PURPOSE -> CHECK NOTIFICATION SYSTEM
-    const game = {
+    const gameInfos = {
       id: id,
       title: title,
       price: price, // DEMO PURPOSE : CHANGE THIS BY demoPrice
       newPrice: null,
-      change: false
+      change: false,
+      game: game
     }
  
     addNotif(title);
 
-    favGames.push(game);
+    favGames.push(gameInfos);
     this.setState({favGames})
 
   }

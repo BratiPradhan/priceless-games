@@ -32,3 +32,35 @@
     background-color: rgba(255, 255, 255, 0.301);
     color: #fff;
 }
+
+.fav-card{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #202d39;
+    margin: auto;
+    margin-bottom: 5px;
+    background: rgba( 0, 0, 0, 0.2 );
+    text-decoration: none;
+    color: #c7d5e0;
+}
+
+.fav-thumb{
+    display: block;
+    width: 175px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #13171e;
+}
+
+.fav-card:hover{
+    background: rgba( 0, 0, 0, 0.4 );
+}
+
+.fav-prices :nth-child(2){
+    text-decoration: line-through;
+    color: gray;
+}
