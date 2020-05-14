@@ -24,6 +24,7 @@ class GameList extends Component{
         }
     }
     render(){
+        const { addFav } = this.props
         return(
            <div className='container result-container'>
                <h2>Your search result</h2>
@@ -33,6 +34,7 @@ class GameList extends Component{
                     this.state.games.map(game => 
                         <GameCard
                             key={game.gameID}
+                            addFav={addFav}
                             {...game}
                         />)  
                     }     

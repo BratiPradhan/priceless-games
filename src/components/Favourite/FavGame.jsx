@@ -9,6 +9,7 @@ const FavGame = ({id, title, price, game, newPrice, change, removeFav, removeNot
      return (
          <div className='fav-row'>
         <Link 
+            onMouseOver={() => removeNotif(id) }
             className="fav-card" 
             to={{
                 pathname: `/game/${id}`,

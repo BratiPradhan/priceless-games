@@ -36,3 +36,14 @@ input {
   width: 80px;
   margin-right: 1.5rem;
 }
+
+.result-card-info{
+  margin-left: 15px;
+}
+
+.no-result{
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #16202b;
+}

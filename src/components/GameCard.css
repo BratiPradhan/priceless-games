@@ -1,11 +1,9 @@
 .game-card{
-    max-width: 700px;
+    width: 700px;
     display: flex;
     flex-direction: row;
     align-items: center;
     background: #202d39;
-    margin: auto;
-    margin-bottom: 5px;
     background: rgba( 0, 0, 0, 0.2 );
     text-decoration: none;
     color: #c7d5e0;
@@ -38,4 +36,23 @@
     justify-content: flex-end;
     flex-direction: row;
     text-align: center;
+}
+
+.gamecard-row{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+.add-btn{
+    background-color: #13171e;
+    text-align: center;
+    padding-top: 25px;
+    width: 40px;
+}
+
+.add-btn:hover{
+    cursor: pointer;
+    background-color: #4c6b22;
 }

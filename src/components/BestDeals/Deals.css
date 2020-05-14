@@ -1,3 +1,18 @@
+.deal-card{
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #202d39;
+    margin: auto;
+    margin-bottom: 5px;
+    background: rgba( 0, 0, 0, 0.2 );
+    text-decoration: none;
+    color: #c7d5e0;
+}
+.deal-card:hover{
+    background: rgba( 0, 0, 0, 0.4 );
+}
 .deals-loader{
     width: fit-content;
     margin: auto;

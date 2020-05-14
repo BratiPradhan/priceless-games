@@ -37,7 +37,7 @@ class ShopDeal extends Component{
                     <p>{storeName}</p>
                 </div>
                 <div className="store-pricing">
-                <p> -{Math.round(savings)}% | {price} $</p>
+                <p> {savings > 0 && '-' + Math.round(savings) + '% | '}{price} $</p>
                 </div>
             </a>
         )

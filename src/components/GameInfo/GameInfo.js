@@ -14,15 +14,22 @@ class GameInfo extends Component {
         const { game } = this.props.location.state
 
         return(
-            
-                <div className="game-main"> 
-                    <Image addFav={addFav} gameID={gameID} price={price} imgurl={thumb} title={title} />
-                    <button className='fav-btn' onClick={() => addFav(gameID, title, price, game)}>Follow this game</button>
-                    <div className="game-main-deals">
-                        <RatingNotes dealID={dealID} />
+            <div className='container'>
+            <section className="banner">
+                <div className="container banner-container">
+                    <div className='banner-elem'>
+                        <div className="banner-info">
+                            <h1>{title}</h1>
+                            <RatingNotes dealID={dealID} />
+                            <button className='fav-btn' onClick={() => addFav(gameID, title, price, game)}>Follow this game</button>
+                        </div>
+                    </div>
+                    <div className="banner-elem img-container">
                         <PriceList deals={deals} /> 
                     </div>
                 </div>
+            </section>
+        </div>
             );
     }
 }
