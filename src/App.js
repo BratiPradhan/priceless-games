@@ -47,7 +47,7 @@ class App extends Component {
     const gameInfos = {
       id: id,
       title: title,
-      price: demoPrice, // DEMO PURPOSE : CHANGE THIS BY demoPrice
+      price: price, // DEMO PURPOSE : CHANGE THIS BY demoPrice
       newPrice: null,
       change: false,
       game: game
